@@ -1,9 +1,9 @@
 { pkgs, lib, config, ... }:
 {
     options.mods = {
-        cli.shellUtils.enable = lib.mkEnableOption "enable various shell utils";
+        cli.shellutils.enable = lib.mkEnableOption "enable various shell utils";
     };
-    config = lib.mkIf config.mods.cli.shellUtils.enable {
+    config = lib.mkIf config.mods.cli.shellutils.enable {
         environment.systemPackages = with pkgs; [
             tree
             eza

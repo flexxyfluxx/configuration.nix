@@ -18,7 +18,8 @@
             fsType = "ext4";
         };
         "/boot" = {
-            device = "/dev/disk/by-uuid/4F05-A38C";
+            #device = "/dev/disk/by-uuid/4F05-A38C";
+            device = "/dev/disk/by-uuid/0854-02D5";
             fsType = "vfat";
         };
         "/home" = {

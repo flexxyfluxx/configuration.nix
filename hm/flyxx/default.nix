@@ -9,7 +9,7 @@
                 ./desktopApps
                 ./sway
                 ./waybar
-                ./swaylock
+                ./swaylock.nix
                 ./mail.nix
                 ./home.nix
             ];

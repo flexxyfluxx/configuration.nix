@@ -1,9 +1,9 @@
 { lib, config, ... }:
 {
     options = {
-        mods-hm.desktopApps.librewolf.enable = lib.mkEnableOption "enable browser";
+        hm.mods.desktopApps.librewolf.enable = lib.mkEnableOption "enable browser";
     };
-    config = lib.mkIf config.mods-hm.librewolf.enable {
+    config = lib.mkIf config.hm.mods.desktopApps.librewolf.enable {
         programs.librewolf = {
             enable = true;
         };
