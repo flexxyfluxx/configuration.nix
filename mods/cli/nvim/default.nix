@@ -1,7 +1,7 @@
 { lib, config, ... }:
 {
-    options.mods = {
-        cli.nvim.enable = lib.mkEnableOption "enable nvim";
+    options.mods.cli = {
+        nvim.enable = lib.mkEnableOption "enable nvim";
     };
     config = lib.mkIf config.mods.cli.nvim.enable {
         programs.nixvim = {
@@ -11,10 +11,10 @@
             # extraPlugins = with pkgs.vimPlugins; [
             #     feline
             # ];
-        } // import ./colorschemes.nix
-          // import ./keymaps.nix
-          // import ./opts.nix
-          // import ./plugins
+        }   // import ./colorschemes.nix
+            // import ./keymaps.nix
+            // import ./opts.nix
+            // import ./plugins
         ;
     };
 }

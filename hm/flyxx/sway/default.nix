@@ -11,6 +11,7 @@
             };
         };
     };
+
     config = lib.mkIf config.mods-hm.sway.enable {
         wayland.windowManager.sway = {
             enable = true;
@@ -61,6 +62,7 @@
                     wpctl = "${pkgs.wireplumber}/bin/wpctl";
                     brightnessctl = "${pkgs.brightnessctl}/bin/brightnessctl";
                     launcher = "${config.hm.sway.config.launcher}";
+                    console = "kitty";
                 }
         ;
     };

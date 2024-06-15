@@ -4,16 +4,19 @@
         ./desktop
         ./fixes
         ./fonts.nix
+        ./gaming.nix
         ./git.nix
         ./greetd.nix
         ./grub.nix
         ./keymap.nix
         ./laptop-utils.nix
         ./ncmpcpp.nix
+        ./nix.nix
         ./ntfs.nix
         ./printing.nix
         ./sound.nix
         ./ssh.nix
+        ./users
         ./video.nix
     ];
 }
