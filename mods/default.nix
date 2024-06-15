@@ -1,0 +1,19 @@
+{
+    imports = [
+        ./cli
+        ./desktop
+        ./fixes
+        ./fonts.nix
+        ./git.nix
+        ./greetd.nix
+        ./grub.nix
+        ./keymap.nix
+        ./laptop-utils.nix
+        ./ncmpcpp.nix
+        ./ntfs.nix
+        ./printing.nix
+        ./sound.nix
+        ./ssh.nix
+        ./video.nix
+    ];
+}
