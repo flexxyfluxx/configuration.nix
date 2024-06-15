@@ -1,8 +1,8 @@
 { pkgs, lib, config, ... }:
 let cfg = config.mods.cli.shell;
 in {
-    options.mods = {
-        cli.shell = {
+    options.mods.cli = {
+        shell = {
             enable = lib.mkEnableOption "enable default shellconfig (zsh, default aliases)";
             direnv.enable = lib.mkEnableOption "enable direnv";
             omz.enable = lib.mkEnableOption "enable ohmyzsh";

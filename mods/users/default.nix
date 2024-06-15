@@ -1,5 +1,5 @@
 {
     imports = [
-        ./flyxx
+        ./flyxx.nix
     ];
 }
