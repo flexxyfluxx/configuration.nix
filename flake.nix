@@ -1,6 +1,7 @@
 {
     inputs = {
         nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+        nixpkgs-fixes.url = "github:NixOS/nixpkgs/91a7822b04fe5e15f1604f9ca0fb81eff61b4143"; # HACK: remove this soon
         home-manager = {
             url = "github:nix-community/home-manager";
             inputs.nixpkgs.follows = "nixpkgs";
@@ -27,6 +28,15 @@
                 pkgs = import nixpkgs {
                     system = "${arch}";
                     config.allowUnfree = true;
+                    /* HACK: idek if this does anything qwq; inshallah the repos get fixed soon
+                        overlays = [
+                            (final: prev: {
+                                nodePackages = prev.nodePackages // {
+                                    inherit (inputs.nixpkgs-fixes.legacyPackages.${prev.system}.nodePackages) bash-language-server;
+                                };
+                            })
+                        ];
+                    */
                 };
                 modules = [
                     ./hosts/${hostname}/configuration.nix
@@ -36,7 +46,6 @@
                     home-manager.nixosModules.home-manager
                     nixvim.nixosModules.nixvim
                     #sops-nix.nixosModules.sops
-
                     {
                         networking.hostName = "${hostname}";
                     }
