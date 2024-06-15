@@ -3,16 +3,18 @@
         gopls.enable = true; # Golang LSP
         rust-analyzer = {
             enable = true;
-            installRustc = true;
-            installCargo = true;
+            installRustc = false;
+            installCargo = false;
         };
         # nixd.enable = true; # Nix LSP
-        nil_ls.enable = true;
-        jsonls.enable = true;
+        nil-ls.enable = true;
+        #jsonls.enable = true;
         yamlls.enable = true;
         pyright.enable = true;
         clangd.enable = true;
-        zls.enable = true;
+        #zls.enable = true;
+
+        #TODO: consider cssls
     };
     keymaps = {
         lspBuf = {
