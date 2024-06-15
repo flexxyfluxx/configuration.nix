@@ -1,4 +1,3 @@
-{ lib, config, ... }:
 {
     inputs = {
         nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -36,7 +35,7 @@
                     ./hm
                     home-manager.nixosModules.home-manager
                     nixvim.nixosModules.nixvim
-                    sops-nix.nixosModules.sops
+                    #sops-nix.nixosModules.sops
 
                     {
                         networking.hostName = "${hostname}";
