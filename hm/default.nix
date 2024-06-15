@@ -1,8 +1,7 @@
 { lib, config, ... }:
 {
     imports = [
-        ./mods
-        ./users
+        ./flyxx
     ];
     options = {
         hm.enable = lib.mkEnableOption "enable home-manager";
