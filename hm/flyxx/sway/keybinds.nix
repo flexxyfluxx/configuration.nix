@@ -1,14 +1,15 @@
-{ launcher, wpctl, brightnessctl, ... }:
-{
-    keybindings = let
-        mod = "Mod4";
-        left  = "h";
-        down  = "j";
-        up    = "k";
-        right = "l";
-        console     = "kitty";
-        config-edit = "${console} -d /etc/nixos sudo nvim .";
-    in {
+{ launcher, wpctl, brightnessctl, console, ... }:
+let
+    mod = "Mod4";
+    left  = "h";
+    down  = "j";
+    up    = "k";
+    right = "l";
+    config-edit = "${console} -d /etc/nixos sudo nvim .";
+in {
+    modifier = mod;
+    floating.modifier = mod;
+    keybindings = {
         # General stuff
         "${mod}+Shift+q" = "kill";
 

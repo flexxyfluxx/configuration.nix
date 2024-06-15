@@ -24,19 +24,23 @@
         let
             mkSystem = { hostname, arch }: nixpkgs.lib.nixosSystem {
                 specialArgs = { inherit inputs; };
-                system = arch;
+                system = "${arch}";
                 pkgs = import nixpkgs {
-                    system = arch;
+                    system = "${arch}";
                     config.allowUnfree = true;
                 };
                 modules = [
                     ./hosts/${hostname}/configuration.nix
                     ./hosts/${hostname}/hardware-configuration.nix
                     ./mods
-                    ./mods-hm
+                    ./hm
                     home-manager.nixosModules.home-manager
                     nixvim.nixosModules.nixvim
                     sops-nix.nixosModules.sops
+
+                    {
+                        networking.hostName = "${hostname}";
+                    }
                 ];
             };
         in {
