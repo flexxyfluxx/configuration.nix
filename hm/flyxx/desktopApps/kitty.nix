@@ -1,9 +1,9 @@
 { lib, config, pkgs, ... }:
 {
     options = {
-        mods-hm.desktopApps.kitty.enable = lib.mkEnableOption "enable kitty";
+        hm.mods.desktopApps.kitty.enable = lib.mkEnableOption "enable kitty";
     };
-    config = lib.mkIf config.mods-hm.kitty.enable {
+    config = lib.mkIf config.hm.mods.desktopApps.kitty.enable {
         programs.kitty = {
             enable = true;
             shellIntegration.enableZshIntegration = true;

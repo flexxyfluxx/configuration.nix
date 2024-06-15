@@ -1,6 +1,7 @@
 { lib, config, ... }:
 {
     imports = [
+        ./nvim
         ./shell.nix
         ./shellutils.nix
     ];
@@ -10,6 +11,7 @@
         };
     };
     config = lib.mkIf config.mods.cli.defaults.enable {
-        cli.shell.enable = lib.mkDefault true;
+        mods.cli.shell.enable = lib.mkDefault true;
+        mods.cli.nvim.enable = lib.mkDefault true;
     };
 }

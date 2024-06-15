@@ -1,5 +1,5 @@
 {
-    colors = {
+    config.colors = {
         focused = {
             border = "#5f676a";
             background = "#4f575a";

@@ -1,5 +1,5 @@
 { lib, config, pkgs, ... }:
-let cfg = config.options.mods.clipboard;
+let cfg = config.mods.clipboard;
 in {
     options.mods = {
         clipboard = {

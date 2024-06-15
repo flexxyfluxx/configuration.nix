@@ -1,4 +1,3 @@
-{ ... }:
 {
     plugins = {
         # TODO: consider tagbar

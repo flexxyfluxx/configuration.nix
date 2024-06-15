@@ -1,8 +1,7 @@
 { pkgs, lib, config, ... }:
-let cfg = config.mods.cli.shell;
-in {
-    options.mods.cli = {
-        shell = {
+{
+    options.mods = {
+        cli.shell = {
             enable = lib.mkEnableOption "enable default shellconfig (zsh, default aliases)";
             direnv.enable = lib.mkEnableOption "enable direnv";
             omz.enable = lib.mkEnableOption "enable ohmyzsh";
@@ -10,15 +9,15 @@ in {
         };
     };
 
-    config = lib.mkIf cfg.enable {
-        cli.shell = {
+    config = lib.mkIf config.mods.cli.shell.enable {
+        mods.cli.shell = {
             direnv.enable = lib.mkDefault true;
             omz.enable = lib.mkDefault true;
             aliases.enable = lib.mkDefault true;
         };
         programs.zsh = {
             enable = true;
-            shellAliases = lib.mkIf cfg.aliases.enable {
+            shellAliases = lib.mkIf config.mods.cli.shell.aliases.enable {
                 ssh =  "kitty +kitten ssh -i ~/.ssh/id_ed25519";
                 ls = "ls --color=auto -F ";
                 le = "${pkgs.eza}/bin/eza --icons ";
@@ -42,7 +41,7 @@ in {
             autosuggestions.enable = true;
             enableCompletion = true;
             syntaxHighlighting.enable = true;
-            ohMyZsh = lib.mkIf cfg.omz.enable {
+            ohMyZsh = lib.mkIf config.mods.cli.shell.omz.enable {
                 enable = true;
                 #custom = "/etc/nixos/omzCustoms";
                 plugins = [ 
@@ -55,7 +54,7 @@ in {
         };
         users.defaultUserShell = pkgs.zsh;
 
-        programs.direnv = lib.mkIf cfg.direnv.enable {
+        programs.direnv = lib.mkIf config.mods.cli.shell.direnv.enable {
             enable = true;
         };
         environment.systemPackages = with pkgs; [
