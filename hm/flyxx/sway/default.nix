@@ -13,6 +13,7 @@
     };
 
     config = lib.mkIf config.mods-hm.sway.enable {
+        home.packages = with pkgs; [ swaybg ];
         wayland.windowManager.sway = {
             enable = true;
             config = {

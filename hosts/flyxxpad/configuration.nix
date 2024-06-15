@@ -8,6 +8,7 @@
             laptop-utils.enable     = true;
             printing.enable         = true;
             users.flyxx.enable      = true;
+            clipboard.wl.enable     = true;
         };
         hm = {
             enable = true;

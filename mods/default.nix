@@ -3,6 +3,7 @@
         ./cli
         ./desktop
         ./fixes
+        ./clipboard.nix
         ./fonts.nix
         ./gaming.nix
         ./git.nix
