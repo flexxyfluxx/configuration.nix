@@ -2,7 +2,7 @@
 {
     options = {
         mods-hm.swaylock.enable = lib.mkEnableOption "enable swaylock" // {
-            default = config.mods-hm.sway.enable;
+            default = true;
         };
     };
     config = lib.mkIf config.mods-hm.swaylock.enable {

@@ -1,8 +1,10 @@
 { lib, config, pkgs, ... }:
 {
-    options.mods-hm = {
+    options.hm.mods = {
         sway = {
-            enable = lib.mkEnableOption "enable sway";
+            enable = lib.mkEnableOption "enable sway" // {
+                default = true;  # FIXME: figure out hm options
+            };
             config = {
                 launcher = lib.mkOption {
                     description = "app launcher config";
@@ -12,7 +14,7 @@
         };
     };
 
-    config = lib.mkIf config.mods-hm.sway.enable {
+    config = lib.mkIf config.hm.mods.sway.enable {
         home.packages = with pkgs; [ swaybg ];
         wayland.windowManager.sway = {
             enable = true;
@@ -29,14 +31,17 @@
 
                 output = {
                     "*" = {
+                        /*
                         #bg = let img = /etc/nixos/wallpaper/d2016_runetrials.jpg;
                         bg = let img = /etc/nixos/wallpaper/trans_splat_darkened.jpg;
                         in "${img} fill";
+                        */
                     };
                 };
 
                 bars = [
-                    (lib.mkIf (config.mods-hm.waybar.enable == false) {
+                    /*
+                    (lib.mkIf (config.hm.mods.waybar.enable == false) {
                         output = "eDP-1";
                         fonts = {
                             names = [ "JetBrains Mono" ];
@@ -44,6 +49,7 @@
                             size = 8.0;
                         };
                     })
+                    */
                 ];
 
             };
@@ -62,7 +68,9 @@
             // import ./keybinds.nix {
                     wpctl = "${pkgs.wireplumber}/bin/wpctl";
                     brightnessctl = "${pkgs.brightnessctl}/bin/brightnessctl";
-                    launcher = "${config.hm.sway.config.launcher}";
+                    # FIXME: figure out hm options
+                    # launcher = "${config.hm.sway.config.launcher}";
+                    launcher = "${pkgs.bemenu}/bin/bemenu-run --fn 'JetBrainsMono Nerd Font Regular 11'";
                     console = "kitty";
                 }
         ;

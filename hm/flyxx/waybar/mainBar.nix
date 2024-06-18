@@ -23,7 +23,7 @@
     cpu = {
         interval = 1;
         format = "CPU {icon0}{icon1}{icon2}{icon3}{icon4}{icon5}{icon6}{icon7}"
-                 "FREQ ~{avg_frequency:0<4} ↑{max_frequency:0<4} ↓{min_frequency:0<4}";
+               + "FREQ ~{avg_frequency:0<4} ↑{max_frequency:0<4} ↓{min_frequency:0<4}";
         format-icons = [ "▁" "▂" "▃" "▄" "▅" "▆" "▇" "█" ];
     };
     temperature = {

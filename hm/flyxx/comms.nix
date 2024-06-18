@@ -1,5 +1,7 @@
 { ... }:
 {
-    options = {
+    options.hm.mods = {
+    };
+    config = {
     };
 }

@@ -1,11 +1,11 @@
 { lib, config, ... }:
 {
     options = {
-        mods-hm.waybar.enable = lib.mkEnableOption "enable waybar" // {
-            default = config.mods-hm.sway.enable;
+        hm.mods.waybar.enable = lib.mkEnableOption "enable waybar" // {
+            default = true;  # FIXME: figure out hm options
         };
     };
-    config = lib.mkIf config.mods-hm.waybar.enable {
+    config = lib.mkIf config.hm.mods.waybar.enable {
         programs.waybar = {
             enable = true;
             systemd.enable = true;
