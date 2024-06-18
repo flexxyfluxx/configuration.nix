@@ -1,5 +1,5 @@
 {
-    config.modes = let
+    modes = let
         mod = "Mod4";
         left  = "h";
         down  = "j";
