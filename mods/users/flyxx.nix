@@ -7,7 +7,8 @@ in {
     config = lib.mkIf cfg.flyxx.enable {
         users.users."flyxx" = {
             isNormalUser = true;
-            extraGroups = [ "wheel" ];
+            extraGroups = [ "wheel" ]
+                ++ lib.optional config.networking.networkmanager.enable "networkmanager";
         };
     };
 }
