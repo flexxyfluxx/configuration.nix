@@ -1,7 +1,9 @@
 { lib, config, ... }:
 {
     options = {
-        hm.mods.mail.enable = lib.mkEnableOption "enable mail";
+        hm.mods.mail.enable = lib.mkEnableOption "enable mail" // {
+            default = true;  # FIXME: figure out hm options
+        };
     };
     config = lib.mkIf config.hm.mods.mail.enable {
         accounts.email = {

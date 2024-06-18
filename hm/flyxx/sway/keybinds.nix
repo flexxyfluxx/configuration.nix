@@ -8,7 +8,7 @@
         right = "l";
         config-edit = "${console} -d /etc/nixos sudo nvim .";
     in {
-        modifier = mod;
+        #modifier = mod;
         floating.modifier = mod;
         keybindings = {
             # General stuff

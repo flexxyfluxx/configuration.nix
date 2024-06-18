@@ -7,13 +7,15 @@ in {
         ./thunderbird.nix
     ];
     options.hm.mods = {
-        desktopApps.defaults.enable = lib.mkEnableOption "enable default desktop apps";
+        desktopApps.defaults.enable = lib.mkEnableOption "enable default desktop apps" // {
+            default = true;
+        };
     };
     config = lib.mkIf cfg.desktopApps.defaults.enable {
         hm.mods.desktopApps = {
-            librewolf.enable = lib.mkOptionDefault true;
-            kitty.enable = lib.mkOptionDefault true;
-            thunderbird.enable = lib.mkOptionDefault config.hm.mods.mail.enable;
+            librewolf.enable = lib.mkDefault true;
+            kitty.enable = lib.mkDefault true;
+            thunderbird.enable = lib.mkDefault config.hm.mods.mail.enable;
         };
     };
 }

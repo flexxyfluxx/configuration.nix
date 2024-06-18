@@ -4,7 +4,7 @@ let
 in {
     options.hm.mods = {
         xdg-portal.enable = lib.mkEnableOption "enable xdg-portal (for screen sharing)" // {
-            default = cfg.sway.enable;
+            default = true; # FIXME: figure out hm options
         };
     };
     config = lib.mkIf cfg.xdg-portal.enable {
