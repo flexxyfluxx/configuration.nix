@@ -52,7 +52,18 @@
                     */
                 ];
 
-            };
+            }   // import ./modes.nix
+                // import ./colors.nix
+                // import ./keybinds.nix {
+                        wpctl = "${pkgs.wireplumber}/bin/wpctl";
+                        brightnessctl = "${pkgs.brightnessctl}/bin/brightnessctl";
+                        # FIXME: figure out hm options
+                        # launcher = "${config.hm.sway.config.launcher}";
+                        launcher = "${pkgs.bemenu}/bin/bemenu-run --fn 'JetBrainsMono Nerd Font Regular 11'";
+                        console = "kitty";
+                    }
+            ;
+
             wrapperFeatures.gtk = true;
 
             # this is bc nix inserts config options into the actual resulting config in alphabetical
@@ -63,16 +74,6 @@
             extraConfig = ''
                 workspace number 1
                 '';
-        }   // import ./modes.nix
-            // import ./colors.nix
-            // import ./keybinds.nix {
-                    wpctl = "${pkgs.wireplumber}/bin/wpctl";
-                    brightnessctl = "${pkgs.brightnessctl}/bin/brightnessctl";
-                    # FIXME: figure out hm options
-                    # launcher = "${config.hm.sway.config.launcher}";
-                    launcher = "${pkgs.bemenu}/bin/bemenu-run --fn 'JetBrainsMono Nerd Font Regular 11'";
-                    console = "kitty";
-                }
-        ;
+        };
     };
 }
