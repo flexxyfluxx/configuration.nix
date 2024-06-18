@@ -43,7 +43,7 @@
             syntaxHighlighting.enable = true;
             ohMyZsh = lib.mkIf config.mods.cli.shell.omz.enable {
                 enable = true;
-                #custom = "/etc/nixos/omzCustoms";
+                custom = toString ./omz;
                 plugins = [ 
                     "vi-mode"
                     "fzf"
