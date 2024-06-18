@@ -47,9 +47,9 @@
                 plugins = [ 
                     "vi-mode"
                     "fzf"
-                    #"flyxx"
+                    "flyxx"
                 ];
-                #theme = "flyxx";
+                theme = "flyxx";
             };
         };
         users.defaultUserShell = pkgs.zsh;
