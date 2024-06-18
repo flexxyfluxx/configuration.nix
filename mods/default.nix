@@ -3,6 +3,8 @@
         ./cli
         ./desktop
         ./fixes
+        ./wireless
+        ./users
         ./clipboard.nix
         ./fonts.nix
         ./gaming.nix
@@ -17,7 +19,6 @@
         ./printing.nix
         ./sound.nix
         ./ssh.nix
-        ./users
         ./video.nix
     ];
 }
