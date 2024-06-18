@@ -31,11 +31,9 @@
 
                 output = {
                     "*" = {
-                        /*
-                        #bg = let img = /etc/nixos/wallpaper/d2016_runetrials.jpg;
-                        bg = let img = /etc/nixos/wallpaper/trans_splat_darkened.jpg;
+                        #bg = let img = ./wallpaper/d2016_runetrials.jpg;
+                        bg = let img = ./wallpaper/trans_splat_darkened.jpg;
                         in "${img} fill";
-                        */
                     };
                 };
 
