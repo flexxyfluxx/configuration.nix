@@ -1,7 +1,7 @@
 { config, pkgs, inputs, ... }:
 {
     imports = [
-        inputs.sops-nix.nixosModules.sops
+        # inputs.sops-nix.nixosModules.sops
     ];
     config = {
         time.timeZone = "Europe/Berlin";
@@ -14,14 +14,17 @@
             users.flyxx.enable      = true;
             clipboard.wl.enable     = true;
             wireless = {
-                wifi.enable         = true;
+                # wifi.enable         = true;
                 bluetooth.enable    = true;
             };
+            networkmanager.enable = true;
         };
         hm = {
             enable = true;
             users.flyxx.enable = true;
         };
+
+        networking.networkmanager.unmanaged = [ "enp2s0" ];
 
         # sops = {
         #     defaultSopsFile = ../../secrets/secrets.yaml;
