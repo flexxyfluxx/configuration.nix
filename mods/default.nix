@@ -14,6 +14,7 @@
         ./keymap.nix
         ./laptop-utils.nix
         ./ncmpcpp.nix
+        ./networkmanager.nix
         ./nix.nix
         ./ntfs.nix
         ./printing.nix

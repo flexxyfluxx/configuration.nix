@@ -1,6 +1,6 @@
 {
     imports = [
-        ./wifi.nix
+        # ./wifi.nix
         ./bluetooth.nix
     ];
 }
