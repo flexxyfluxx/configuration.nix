@@ -1,12 +1,7 @@
-{ lib, config, pkgs, ... }:
+{ lib, config, osConfig, pkgs, ... }:
 let
-    cfg = config.hm.mods;
+    cfg = osConfig.hm.flyxx.mods;
 in {
-    options.hm.mods = {
-        xdg-portal.enable = lib.mkEnableOption "enable xdg-portal (for screen sharing)" // {
-            default = true; # FIXME: figure out hm options
-        };
-    };
     config = lib.mkIf cfg.xdg-portal.enable {
         # FIXME: currently doesnt work
         # maybe enable system-wide?

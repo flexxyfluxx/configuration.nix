@@ -17,11 +17,25 @@
                 # wifi.enable         = true;
                 bluetooth.enable    = true;
             };
-            networkmanager.enable = true;
+            networkmanager.enable   = true;
+            keyring.enable          = true;
         };
         hm = {
             enable = true;
-            users.flyxx.enable = true;
+            flyxx = {
+                enable = true;
+                mods = {
+                    desktopApps.defaults.enable = true;
+                    sway.enable = true;
+                    waybar = {
+                        enable = true;
+                        cpu-count = 16;
+                    };
+                    swaylock.enable = true;
+                    xdg-portal.enable = true;
+                    mail.enable = true;
+                };
+            };
         };
 
         networking.networkmanager.unmanaged = [ "enp2s0" ];

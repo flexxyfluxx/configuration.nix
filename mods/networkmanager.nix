@@ -5,6 +5,6 @@
     };
     config = lib.mkIf config.mods.networkmanager.enable {
         networking.networkmanager.enable = true;
-        programs.nmcli.enable = true;
+        programs.nm-applet.enable = true;
     };
 }

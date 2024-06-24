@@ -1,6 +1,5 @@
 { lib, config, pkgs, ... }:
 {
-    options = {};
     config = {
         home = {
             stateVersion = "24.05";
@@ -9,12 +8,13 @@
 
             packages = with pkgs; [
                 vesktop
-                    element-desktop
-                    vlc
-                    alsa-utils
-                    logisim-evolution
-                    jetbrains.pycharm-professional
-                    bc
+                element-desktop
+                vlc
+                alsa-utils
+                logisim-evolution
+                jetbrains.pycharm-professional
+                bc
+                prismlauncher
             ];
         };
     };

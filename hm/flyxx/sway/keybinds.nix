@@ -1,4 +1,4 @@
-{ launcher, wpctl, brightnessctl, console, ... }:
+{ pkgs, launcher, wpctl, brightnessctl, console, ... }:
 let
     mod = "Mod4";
     left  = "h";
@@ -83,7 +83,7 @@ in {
         "XF86AudioMute"        = "exec --no-startup-id ${wpctl} set-mute @DEFAULT_AUDIO_SINK@ toggle";
 
         # screenshot UwU
-        "${mod}+p" = "exec grim -g \"$(slurp)\" - | wl-copy";
+        "${mod}+p" = "exec ${pkgs.grim}/bin/grim -g \"$(${pkgs.slurp}/bin/slurp)\" - | ${pkgs.wl-clipboard}/bin/wl-copy";
 
         # resizing
         "${mod}+r" = "mode resize";
