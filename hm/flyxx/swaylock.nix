@@ -1,11 +1,6 @@
-{ lib, config, ... }:
+{ lib, config, osConfig, ... }:
 {
-    options = {
-        mods-hm.swaylock.enable = lib.mkEnableOption "enable swaylock" // {
-            default = true;
-        };
-    };
-    config = lib.mkIf config.mods-hm.swaylock.enable {
+    config = lib.mkIf osConfig.hm.flyxx.mods.swaylock.enable {
         programs.swaylock = {
             enable = true;
             settings = {

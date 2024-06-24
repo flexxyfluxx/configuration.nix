@@ -10,5 +10,7 @@ in {
             extraGroups = [ "wheel" ]
                 ++ lib.optional config.networking.networkmanager.enable "networkmanager";
         };
+        security.pam.services."flyxx".enableGnomeKeyring = true;
+        services.gnome.gnome-keyring.enable = true;
     };
 }

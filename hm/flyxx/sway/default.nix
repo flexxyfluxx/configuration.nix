@@ -1,20 +1,6 @@
-{ lib, config, pkgs, ... }:
+{ lib, config, osConfig, pkgs, ... }:
 {
-    options.hm.mods = {
-        sway = {
-            enable = lib.mkEnableOption "enable sway" // {
-                default = true;  # FIXME: figure out hm options
-            };
-            config = {
-                launcher = lib.mkOption {
-                    description = "app launcher config";
-                    default = "${pkgs.bemenu}/bin/bemenu-run --fn 'JetBrainsMono Nerd Font Regular 11'";
-                };
-            };
-        };
-    };
-
-    config = lib.mkIf config.hm.mods.sway.enable {
+    config = lib.mkIf osConfig.hm.flyxx.mods.sway.enable {
         home.packages = with pkgs; [ swaybg ];
         wayland.windowManager.sway = {
             enable = true;
@@ -27,6 +13,10 @@
                         tap = "enabled";
                         natural_scroll = "enabled";
                     };
+                    "1133:16511:Logitech_G502" = {
+                        accel_profile = "flat";
+                        pointer_accel = "-0.85";
+                    };
                 };
 
                 output = {
@@ -34,6 +24,14 @@
                         #bg = let img = ./wallpaper/d2016_runetrials.jpg;
                         bg = let img = ./wallpaper/trans_splat_darkened.jpg;
                         in "${img} fill";
+                    };
+                    "HDMI-A-1" = {
+                        resolution = "1920x1080";
+                        position = "0,360";
+                    };
+                    "DP-3" = {
+                        resolution = "2560x1440";
+                        position = "1920,0";
                     };
                 };
 
@@ -55,10 +53,10 @@
                 // import ./keybinds.nix {
                         wpctl = "${pkgs.wireplumber}/bin/wpctl";
                         brightnessctl = "${pkgs.brightnessctl}/bin/brightnessctl";
-                        # FIXME: figure out hm options
-                        # launcher = "${config.hm.sway.config.launcher}";
-                        launcher = "${pkgs.bemenu}/bin/bemenu-run --fn 'JetBrainsMono Nerd Font Regular 11'";
+                        launcher = "${osConfig.hm.flyxx.mods.sway.config.launcher}";
+                        # launcher = "${pkgs.bemenu}/bin/bemenu-run --fn 'JetBrainsMono Nerd Font Regular 11'";
                         console = "kitty";
+                        inherit pkgs;
                     }
             ;
 
