@@ -40,10 +40,14 @@
         };
     };
     disk = {
-        interval = 5;
+        interval = 10;
+        # format = "{used:0.1f}/{total:0.1f} on {path}";
+        # unit = "GiB";
     };
     memory = {
         interval = 1;
+        format = "MEM {used:0.1f}/{total:0.1f}";
+        tooltip-format = "main: {used:0.1f}/{total:0.1f}; swap: {swapUsed:0.1f}/{swapTotal:0.1f}";
     };
     network = {
         interval = 1;

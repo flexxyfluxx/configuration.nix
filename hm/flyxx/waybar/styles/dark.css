@@ -200,11 +200,13 @@ label:focus {
 }
 
 #memory {
-    background-color: #9b59b6;
+    /*background-color: #9b59b6;*/
+    min-width: 100px;
 }
 
 #disk {
-    background-color: #964B00;
+    /*background-color: #964B00;*/
+    /*min-width: 100px;*/
 }
 
 #backlight {
