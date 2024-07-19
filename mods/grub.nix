@@ -11,7 +11,7 @@
             enable = true;
             efiSupport = true;
             device = "nodev";
-            useOSProber = false;
+            useOSProber = true;
             configurationLimit = 32;
         };
         boot.tmp.cleanOnBoot = true;
