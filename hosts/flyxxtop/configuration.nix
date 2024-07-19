@@ -25,6 +25,7 @@
                     swaylock.enable = true;
                     xdg-portal.enable = true;
                     mail.enable = true;
+                    ld.enable = true;
                 };
             };
         };
