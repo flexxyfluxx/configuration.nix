@@ -10,6 +10,7 @@
             clipboard.wl.enable     = true;
             gaming.enable           = true;
             ntfs3g.enable           = true;
+            ld.enable = true;
         };
         hm = {
             enable = true;
@@ -25,7 +26,6 @@
                     swaylock.enable = true;
                     xdg-portal.enable = true;
                     mail.enable = true;
-                    ld.enable = true;
                 };
             };
         };
