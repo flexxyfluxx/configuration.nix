@@ -7,9 +7,9 @@ in {
         };
     };
     config = lib.mkIf cfg.video.enable {
-        hardware.opengl = {
+        hardware.graphics = {
             enable = true;
-            driSupport = true;
+            # driSupport = true;
         };
     };
 }
