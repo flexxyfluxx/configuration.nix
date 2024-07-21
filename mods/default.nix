@@ -13,7 +13,6 @@
         ./grub.nix
         ./keymap.nix
         ./laptop-utils.nix
-        ./ld.nix
         ./ncmpcpp.nix
         ./networkmanager.nix
         ./nix.nix

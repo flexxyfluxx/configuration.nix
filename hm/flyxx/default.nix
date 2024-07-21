@@ -2,7 +2,9 @@
 {
     options.hm = {
         flyxx.enable = lib.mkEnableOption "enable HM config of user flyxx";
-        flyxx.mods = {
+        flyxx.mods = rec {
+            # HACK: For some reason, I can't use recursive functionality. It just type-errors. It shouldn't type-error.
+            # desktopApps = {
             desktopApps = let cfg = config.hm.flyxx.mods.desktopApps; in {
                 defaults.enable = lib.mkEnableOption "enable default desktop apps"; #// { default = true; };
                 kitty.enable = lib.mkEnableOption "enable kitty" // { default = cfg.defaults.enable; };
@@ -25,20 +27,22 @@
                     description = "CPU core count to display";
                 };
             };
-            swaylock.enable = lib.mkEnableOption "enable swaylock"; #// { default = true; };
+            swaylock.enable = lib.mkEnableOption "enable swaylock" // { default = sway.enable; };
             xdg-portal.enable = lib.mkEnableOption "enable xdg-portal (for screen sharing)"; #// { default = true;
             mail.enable = lib.mkEnableOption "enable mail";
+            notifs.enable = lib.mkEnableOption "enable notification widget" // { default = sway.enable; };
         };
     };
     config = lib.mkIf config.hm.flyxx.enable {
         home-manager.users."flyxx" = {
             imports = [
                 ./desktopApps
-                ./sway
-                ./waybar
-                ./swaylock.nix
-                ./mail.nix
                 ./home.nix
+                ./mail.nix
+                ./notifs.nix
+                ./sway
+                ./swaylock.nix
+                ./waybar
             ];
         };
     };
