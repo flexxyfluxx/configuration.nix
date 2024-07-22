@@ -7,14 +7,16 @@
             homeDirectory = "/home/flyxx";
 
             packages = with pkgs; [
-                vesktop
-                element-desktop
-                vlc
                 alsa-utils
-                logisim-evolution
-                jetbrains.pycharm-professional
                 bc
+                jetbrains.idea-ultimate
+                jetbrains.pycharm-professional
+                logisim-evolution
                 prismlauncher
+                vesktop
+                vlc
+                # no more element. i have nheko now
+                # element-desktop
             ];
         };
     };
