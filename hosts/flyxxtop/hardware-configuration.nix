@@ -33,6 +33,20 @@
       fsType = "btrfs";
     };
 
+  fileSystems."/mnt/hdd1" =
+    { device = "/dev/disk/by-uuid/3EA469F9A469B455";
+      # fsType = "ntfs3";
+      fsType = "ntfs";
+      /* options =
+        [ "uid=1000"
+          "gid=1000"
+          "rw"
+          "user"
+          "exec"
+          "umask=000"
+        ]; */
+    };
+
   swapDevices =
     [ { device = "/dev/disk/by-uuid/b0808574-1c37-495a-a5b5-7984f9774745"; }
     ];
