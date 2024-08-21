@@ -3,7 +3,7 @@
         gopls.enable = true; # Golang LSP
         rust-analyzer = {
             enable = true;
-            installRustc = false;
+            installRustc = true;
             installCargo = false;
         };
         # nixd.enable = true; # Nix LSP

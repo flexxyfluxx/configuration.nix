@@ -21,5 +21,6 @@
         ./sound.nix
         ./ssh.nix
         ./video.nix
+        ./xdg.nix
     ];
 }
