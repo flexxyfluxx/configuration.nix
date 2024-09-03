@@ -25,13 +25,13 @@
                         bg = let img = ./wallpaper/trans_splat_darkened.jpg;
                         in "${img} fill";
                     };
-                    "HDMI-A-1" = {
-                        resolution = "1920x1080";
-                        position = "0,360";
-                    };
                     "DP-3" = {
                         resolution = "2560x1440";
-                        position = "1920,0";
+                        position = "0,0";
+                    };
+                    "HDMI-A-1" = {
+                        resolution = "1920x1080";
+                        position = "2560,360";
                     };
                 };
 
