@@ -7,12 +7,12 @@
         time.timeZone = "Europe/Berlin";
 
         mods = {
-            cli.shellutils.enable   = true;
-            git.enable              = true;
-            laptop-utils.enable     = true;
-            printing.enable         = true;
-            users.flyxx.enable      = true;
-            clipboard.wl.enable     = true;
+            cli.shellutils  .enable = true;
+            git             .enable = true;
+            laptop-utils    .enable = true;
+            printing        .enable = true;
+            users.flyxx     .enable = true;
+            clipboard.wl    .enable = true;
             wireless = {
                 # wifi.enable         = true;
                 bluetooth.enable    = true;

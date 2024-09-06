@@ -7,8 +7,13 @@ in {
     config = lib.mkIf cfg.flyxx.enable {
         users.users."flyxx" = {
             isNormalUser = true;
-            extraGroups = [ "wheel" ]
-                ++ lib.optional config.networking.networkmanager.enable "networkmanager";
+            extraGroups = [
+                "wheel"
+                (lib.mkIf config.mods.networkmanager.enable
+                    "networkmanager")
+                (lib.mkIf config.mods.gnunet.enable
+                    "gnunet")
+            ];
         };
         security.pam.services."flyxx".enableGnomeKeyring = true;
         services.gnome.gnome-keyring.enable = true;

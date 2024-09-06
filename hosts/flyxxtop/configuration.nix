@@ -3,14 +3,15 @@
         time.timeZone = "Europe/Berlin";
 
         mods = {
-            cli.shellutils.enable   = true;
-            clipboard.wl.enable     = true;
-            gaming.enable           = true;
-            git.enable              = true;
-            ntfs3g.enable           = true;
-            printing.enable         = true;
-            users.flyxx.enable      = true;
-            xdg-portal.enable       = true;
+            cli.shellutils  .enable = true;
+            clipboard.wl    .enable = true;
+            gaming          .enable = true;
+            git             .enable = true;
+            gnunet          .enable = true;
+            ntfs3g          .enable = true;
+            printing        .enable = true;
+            users.flyxx     .enable = true;
+            xdg-portal      .enable = true;
         };
         hm = {
             enable = true;
@@ -28,6 +29,13 @@
                     };
                     xdg-portal.enable = true;
                 };
+            };
+        };
+
+        networking.wireless = {
+            enable = true;
+            networks."fill in name as needed" = {
+                psk = "fill in passwd as needed";
             };
         };
 
