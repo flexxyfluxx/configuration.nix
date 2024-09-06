@@ -1,14 +1,13 @@
 {
     imports = [
         ./cli
+        ./clipboard.nix
         ./desktop
         ./fixes
-        ./wireless
-        ./users
-        ./clipboard.nix
         ./fonts.nix
         ./gaming.nix
         ./git.nix
+        ./gnunet.nix
         ./greetd.nix
         ./grub.nix
         ./keymap.nix
@@ -20,7 +19,9 @@
         ./printing.nix
         ./sound.nix
         ./ssh.nix
+        ./users
         ./video.nix
+        ./wireless
         ./xdg.nix
     ];
 }
