@@ -18,7 +18,6 @@
                 bluetooth.enable    = true;
             };
             networkmanager.enable   = true;
-            keyring.enable          = true;
         };
         hm = {
             enable = true;
@@ -26,19 +25,22 @@
                 enable = true;
                 mods = {
                     desktopApps.defaults.enable = true;
+                    # TODO: remove once olm's gone
+                    desktopApps.nheko.enable = false;
                     sway.enable = true;
                     waybar = {
                         enable = true;
-                        cpu-count = 16;
+                        cpu-count = 8;
                     };
                     swaylock.enable = true;
                     xdg-portal.enable = true;
                     mail.enable = true;
+                    notifs.enable = true;
                 };
             };
         };
 
-        networking.networkmanager.unmanaged = [ "enp2s0" ];
+        # networking.networkmanager.unmanaged = [ "enp2s0" ];
 
         # sops = {
         #     defaultSopsFile = ../../secrets/secrets.yaml;
