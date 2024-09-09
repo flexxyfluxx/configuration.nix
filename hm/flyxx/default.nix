@@ -6,11 +6,12 @@
             # HACK: For some reason, I can't use recursive functionality. It just type-errors. It shouldn't type-error.
             # desktopApps = {
             desktopApps = let cfg = config.hm.flyxx.mods.desktopApps; in {
-                defaults.enable = lib.mkEnableOption "enable default desktop apps"; #// { default = true; };
+                defaults.enable = lib.mkEnableOption "enable default desktop apps";
                 kitty.enable = lib.mkEnableOption "enable kitty" // { default = cfg.defaults.enable; };
                 librewolf.enable = lib.mkEnableOption "enable librewolf" // { default = cfg.defaults.enable; };
                 thunderbird.enable = lib.mkEnableOption "enable thunderbird" // { default = cfg.defaults.enable; };
                 nheko.enable = lib.mkEnableOption "enable nheko" // { default = cfg.defaults.enable; };
+                tidal.enable = lib.mkEnableOption "enable tidal";  # not a default-kinda module
             };
             sway = {
                 enable = lib.mkEnableOption "enable sway"; #// { default = true; };
