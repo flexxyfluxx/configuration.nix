@@ -13,11 +13,11 @@
             printing        .enable = true;
             users.flyxx     .enable = true;
             clipboard.wl    .enable = true;
+            networkmanager  .enable = true;
             wireless = {
                 # wifi.enable         = true;
-                bluetooth.enable    = true;
+                bluetooth.enable = true;
             };
-            networkmanager.enable   = true;
         };
         hm = {
             enable = true;
@@ -25,17 +25,16 @@
                 enable = true;
                 mods = {
                     desktopApps.defaults.enable = true;
-                    # TODO: remove once olm's gone
-                    desktopApps.nheko.enable = false;
-                    sway.enable = true;
+                    desktopApps.nheko   .enable = false;  # TODO: remove once olm's gone
+                    swaylock            .enable = true;
+                    xdg-portal          .enable = true;
+                    mail                .enable = true;
+                    notifs              .enable = true;
+                    sway                .enable = true;
                     waybar = {
                         enable = true;
                         cpu-count = 8;
                     };
-                    swaylock.enable = true;
-                    xdg-portal.enable = true;
-                    mail.enable = true;
-                    notifs.enable = true;
                 };
             };
         };
