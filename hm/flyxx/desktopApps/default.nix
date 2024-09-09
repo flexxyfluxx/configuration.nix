@@ -5,5 +5,6 @@
         ./nheko.nix
         ./kitty.nix
         ./thunderbird.nix
+        ./tidal.nix
     ];
 }
