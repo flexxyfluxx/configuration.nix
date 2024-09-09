@@ -10,7 +10,8 @@
                 kitty.enable = lib.mkEnableOption "enable kitty" // { default = cfg.defaults.enable; };
                 librewolf.enable = lib.mkEnableOption "enable librewolf" // { default = cfg.defaults.enable; };
                 thunderbird.enable = lib.mkEnableOption "enable thunderbird" // { default = cfg.defaults.enable; };
-                nheko.enable = lib.mkEnableOption "enable nheko" // { default = cfg.defaults.enable; };
+                # INFO: nheko currently disabled due to being marked as insecure thanks to libolm deprecation etc
+                nheko.enable = lib.mkEnableOption "enable nheko"; #// { default = cfg.defaults.enable; };
                 tidal.enable = lib.mkEnableOption "enable tidal";  # not a default-kinda module
             };
             sway = {
