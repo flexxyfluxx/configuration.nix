@@ -25,7 +25,6 @@
                 enable = true;
                 mods = {
                     desktopApps.defaults.enable = true;
-                    desktopApps.nheko   .enable = false;  # TODO: remove once olm's gone
                     swaylock            .enable = true;
                     xdg-portal          .enable = true;
                     mail                .enable = true;
