@@ -19,10 +19,11 @@
                 enable = true;
                 mods = {
                     desktopApps.defaults.enable = true;
-                    mail.enable = true;
-                    notifs.enable = true;
-                    sway.enable = true;
-                    swaylock.enable = true;
+                    desktopApps.tidal   .enable = true;
+                    mail                .enable = true;
+                    notifs              .enable = true;
+                    sway                .enable = true;
+                    swaylock            .enable = true;
                     waybar = {
                         enable = true;
                         cpu-count = 16;
@@ -34,8 +35,8 @@
 
         networking.wireless = {
             enable = true;
-            networks."fill in name as needed" = {
-                psk = "fill in passwd as needed";
+            networks = {
+
             };
         };
 
