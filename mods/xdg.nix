@@ -6,11 +6,10 @@
     config = lib.mkIf config.mods.xdg-portal.enable {
         xdg.portal = {
             enable = true;
+            wlr.enable = true;
             extraPortals = with pkgs; [
-                xdg-desktop-portal-wlr
                 xdg-desktop-portal-gtk
             ];
-            # config.common.default = [ "gtk" ];
         };
     };
 }
