@@ -22,6 +22,9 @@
         { mode = "v"; key = "<leader>y"; action = "\"+y"; }
         { mode = "n"; key = "<leader>Y"; action = "\"+Y"; }
 
+        { mode = "n"; key = "yp"; action = "mzyyP`z"; }
+        { mode = "v"; key = "yp"; action = "mzyP`z"; }
+
         { mode = "n"; key = "<leader>d"; action = "\"_d"; }
         { mode = "v"; key = "<leader>d"; action = "\"_d"; }
 
