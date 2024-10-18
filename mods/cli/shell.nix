@@ -32,6 +32,7 @@
                 nv = "nvim ";
                 "cd." = "cd ..";
                 woman = "man";
+                icat = "kitten icat";
             };
             # Disables the startup wizard
             shellInit = ''

@@ -21,12 +21,10 @@
 
         tagbar.enable = true;
 
-        /*
-           coq-nvim = {
-           enable = true; # Autocompletion display
-           autoStart = true;
-           };
-         */
+        # coq-nvim = {
+        #     enable = true; # Autocompletion display
+        #     autoStart = true;
+        # };
         lsp = {
             enable = true;
         } // import ./lsp.nix;
@@ -37,8 +35,8 @@
         telescope = {
             enable = true;
         } // import ./telescope.nix;
-        harpoon = {
-            enable = true;
-        } // import ./harpoon.nix;
+        # harpoon = {
+        #     enable = true;
+        # } // import ./harpoon.nix;
     };
 }
