@@ -1,5 +1,9 @@
-{ pkgs, ... }:
+{ lib, ... }:
 {
+    options = {
+        enableHDD = lib.mkEnableOption "whether to even attempt to mount the HDD automatically";
+    };
+
     config = {
         time.timeZone = "Europe/Berlin";
 
