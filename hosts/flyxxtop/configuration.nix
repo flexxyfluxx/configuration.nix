@@ -38,7 +38,7 @@
             };
         };
 
-        mountHDD = false;
+        enableHDD = false;
 
         networking.wireless = {
             enable = true;
