@@ -33,7 +33,7 @@
       fsType = "btrfs";
     };
 
-  fileSystems."/mnt/hdd1" =
+  fileSystems."/mnt/hdd1" = lib.mkIf config.mountHDD
     { device = "/dev/disk/by-uuid/3EA469F9A469B455";
       # fsType = "ntfs3";
       fsType = "ntfs";
