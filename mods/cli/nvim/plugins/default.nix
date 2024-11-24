@@ -1,3 +1,4 @@
+{ pkgs }:
 {
     plugins = {
         # TODO: consider tagbar
@@ -27,7 +28,7 @@
         # };
         lsp = {
             enable = true;
-        } // import ./lsp.nix;
+        } // import ./lsp.nix { inherit pkgs; };
 
         comment = {
             enable = true;
@@ -35,8 +36,8 @@
         telescope = {
             enable = true;
         } // import ./telescope.nix;
-        # harpoon = {
-        #     enable = true;
-        # } // import ./harpoon.nix;
+        harpoon = {
+            enable = true;
+        } // import ./harpoon.nix;
     };
 }

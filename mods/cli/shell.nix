@@ -38,7 +38,7 @@
             shellInit = ''
                 zsh-newuser-install() { :; }
                 '';
-            histSize = 25000;
+            histSize = 25000000;
             autosuggestions.enable = true;
             enableCompletion = true;
             syntaxHighlighting.enable = true;

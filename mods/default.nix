@@ -1,5 +1,6 @@
 {
     imports = [
+        ./anglebracket.nix
         ./cli
         ./clipboard.nix
         ./desktop
@@ -12,6 +13,7 @@
         ./grub.nix
         ./keymap.nix
         ./laptop-utils.nix
+        ./man.nix
         ./ncmpcpp.nix
         ./networkmanager.nix
         ./nix.nix

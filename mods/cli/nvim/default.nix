@@ -15,7 +15,7 @@
         }   // import ./colorschemes.nix
             // import ./keymaps.nix
             // import ./opts.nix
-            // import ./plugins
+            // import ./plugins { inherit pkgs; }
         ;
     };
 }

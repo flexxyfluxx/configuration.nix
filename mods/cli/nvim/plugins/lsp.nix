@@ -1,3 +1,4 @@
+{ pkgs }: 
 {
     servers = {
         gopls.enable = true; # Golang LSP
@@ -6,8 +7,17 @@
             installRustc = true;
             installCargo = false;
         };
-        # nixd.enable = true; # Nix LSP
-        nil-ls.enable = true;
+        # nil-ls.enable = true;
+        nixd = {
+            enable = true;
+            cmd = [ "${pkgs.nixd}/bin/nixd" ];
+            settings = {
+                nixpkgs.expr = "import <nixpkgs> { }";
+                options = {
+                    nixos.expr = ''(builtins.getFlake "file://" + toString ./.).nixosConfigurations.currentSystem.options'';
+                };
+            };
+        };
         #jsonls.enable = true;
         yamlls.enable = true;
         pyright.enable = true;
