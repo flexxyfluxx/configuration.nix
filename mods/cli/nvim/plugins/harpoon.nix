@@ -1,7 +1,7 @@
 {
     keymaps = {
         addFile = "<leader>a";
-        cmdToggleQuickMenu = "<C-e>";
+        toggleQuickMenu = "<C-e>";
         navFile = {
             "1" = "<C-h>";
             "2" = "<C-t>";
