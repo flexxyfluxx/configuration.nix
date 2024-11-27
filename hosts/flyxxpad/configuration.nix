@@ -8,12 +8,13 @@
 
         mods = {
             cli.shellutils  .enable = true;
+            clipboard.wl    .enable = true;
+            gaming          .enable = true;
             git             .enable = true;
             laptop-utils    .enable = true;
+            networkmanager  .enable = true;
             printing        .enable = true;
             users.flyxx     .enable = true;
-            clipboard.wl    .enable = true;
-            networkmanager  .enable = true;
             wireless = {
                 # wifi.enable         = true;
                 bluetooth.enable = true;
