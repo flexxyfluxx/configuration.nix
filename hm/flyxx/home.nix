@@ -13,6 +13,7 @@
                 jetbrains.pycharm-professional
                 logisim-evolution
                 prismlauncher
+                syncthing
                 vesktop
                 vlc
                 # no more element. i have nheko now
