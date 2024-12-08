@@ -31,7 +31,7 @@
             };
             swaylock.enable = lib.mkEnableOption "enable swaylock" // { default = sway.enable; };
             xdg-portal.enable = lib.mkEnableOption "enable xdg-portal (for screen sharing)"; #// { default = true;
-            mail.enable = lib.mkEnableOption "enable mail";
+            # mail.enable = lib.mkEnableOption "enable mail";
             notifs.enable = lib.mkEnableOption "enable notification widget" // { default = sway.enable; };
         };
     };
@@ -40,7 +40,7 @@
             imports = [
                 ./desktopApps
                 ./home.nix
-                ./mail.nix
+                # ./mail.nix
                 ./notifs.nix
                 ./sway
                 ./swaylock.nix
