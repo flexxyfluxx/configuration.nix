@@ -28,7 +28,7 @@
                     desktopApps.defaults.enable = true;
                     swaylock            .enable = true;
                     xdg-portal          .enable = true;
-                    mail                .enable = true;
+                    # mail                .enable = true;
                     notifs              .enable = true;
                     sway                .enable = true;
                     waybar = {

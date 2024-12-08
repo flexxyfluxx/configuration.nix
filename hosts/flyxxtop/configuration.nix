@@ -25,7 +25,7 @@
                 mods = {
                     desktopApps.defaults.enable = true;
                     desktopApps.tidal   .enable = true;
-                    mail                .enable = true;
+                    # mail                .enable = true;
                     notifs              .enable = true;
                     sway                .enable = true;
                     swaylock            .enable = true;
