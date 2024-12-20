@@ -7,7 +7,10 @@
         # TODO: consider lsp-status
 
         undotree.enable = true;
-        treesitter.enable = true;
+        treesitter = {
+            enable = true;
+            settings.highlight.enable = true;
+        };
         cmp.enable = true;
         cmp-nvim-lsp.enable = true;
         cmp-buffer.enable = true;

@@ -21,7 +21,13 @@
         #jsonls.enable = true;
         yamlls.enable = true;
         pyright.enable = true;
-        clangd.enable = true;
+        clangd = {
+            enable = true;
+            onAttach.function = ''
+                vim.keymap.set("n", "gh", function() vim.cmd.ClangdSwitchSourceHeader() end)
+            '';
+        };
+        asm_lsp.enable = true;
         #zls.enable = true;
 
         #TODO: consider cssls
@@ -29,12 +35,12 @@
     keymaps = {
         lspBuf = {
             "gd"          = "definition";
-            "<leader>i"   = "hover";
+            # "<leader>i"   = "hover";
             "<leader>vws" = "workspace_symbol";
             "<leader>vca" = "code_action";
             "<leader>vrr" = "references";
             "<leader>vrn" = "rename";
-            "<C-h>"       = "signature_help";
+            "H"           = "signature_help";
         };
         diagnostic = {
             "<leader>vd" = "open_float";

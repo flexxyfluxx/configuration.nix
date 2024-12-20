@@ -1,6 +1,10 @@
-# { lib, config, pkgs, ... }:
+{ pkgs, ... }:
 {
     config = {
         documentation.dev.enable = true;
+        environment.systemPackages = with pkgs; [
+            man-pages
+            man-pages-posix
+        ];
     };
 }
