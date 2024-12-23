@@ -13,6 +13,7 @@ in {
                     "networkmanager")
                 (lib.mkIf config.mods.gnunet.enable
                     "gnunet")
+                "dialout"  # so i can actually write to my fucking arduino
             ];
         };
         security.pam.services."flyxx".enableGnomeKeyring = true;
