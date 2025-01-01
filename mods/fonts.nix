@@ -9,7 +9,7 @@
         fonts.packages = with pkgs; [
             noto-fonts
             jetbrains-mono
-            nerdfonts
+            nerd-fonts.jetbrains-mono
         ];
     };
 }
