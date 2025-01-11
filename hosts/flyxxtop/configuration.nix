@@ -16,6 +16,9 @@
             ntfs3g          .enable = true;
             printing        .enable = true;
             users.flyxx     .enable = true;
+            wireless = {
+                bluetooth   .enable = true;
+            };
             xdg-portal      .enable = true;
         };
         hm = {
