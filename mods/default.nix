@@ -1,6 +1,7 @@
 {
     imports = [
         ./anglebracket.nix
+        ./bleedingedge.nix
         ./cli
         ./clipboard.nix
         ./desktop
@@ -23,6 +24,7 @@
         ./ssh.nix
         ./users
         ./video.nix
+        ./vm.nix
         ./wireless
         ./xdg.nix
     ];

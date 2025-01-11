@@ -8,6 +8,7 @@
         time.timeZone = "Europe/Berlin";
 
         mods = {
+            bleedingedge    .enable = true;
             cli.shellutils  .enable = true;
             clipboard.wl    .enable = true;
             gaming          .enable = true;
@@ -16,6 +17,7 @@
             ntfs3g          .enable = true;
             printing        .enable = true;
             users.flyxx     .enable = true;
+            vm              .enable = true;
             wireless = {
                 bluetooth   .enable = true;
             };
