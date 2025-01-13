@@ -31,6 +31,6 @@ precmd() {
     fi
 }
 
-PROMPT='%B%F{green}%n%F{blue}@%m%k %B%F{cyan}%~ $(git_branch_name)%F{white}'$'\n'' ╙─%\$$ %b%f%k'
+PROMPT='%B%(!.%F{red}.%F{green})%n%F{12}@%F{blue}%m%k %B%F{cyan}%~ $(git_branch_name)%F{white}'$'\n'' ╙─%\$%(!.#.$) %b%f%k'
 
 #neofetch --config ~/.config/neofetch/smolfetch.conf --ascii_bold on
