@@ -1,5 +1,6 @@
 { lib, config, ... }:
-let cfg = config.mods.users;
+let
+    cfg = config.mods.users;
 in {
     options.mods.users = {
         flyxx.enable = lib.mkEnableOption "enable flyxx user";
@@ -9,12 +10,11 @@ in {
             isNormalUser = true;
             extraGroups = [
                 "wheel"
-                (lib.mkIf config.mods.networkmanager.enable
-                    "networkmanager")
-                (lib.mkIf config.mods.gnunet.enable
-                    "gnunet")
                 "dialout"  # so i can actually write to my fucking arduino
-            ];
+            ]   ++ (if config.mods.networkmanager.enable then [ "networkmanager" ] else [])
+                ++ (if config.mods.gnunet.enable then [ "gnunet" ] else [])
+                ++ (if config.mods.vm.enable then [ "libvirt" "kvm" ] else [])
+            ;
         };
         security.pam.services."flyxx".enableGnomeKeyring = true;
         services.gnome.gnome-keyring.enable = true;

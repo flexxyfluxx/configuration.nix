@@ -1,4 +1,4 @@
-{ lib, config, ... }:
+{ lib, config, pkgs, ... }:
 let
     cfg = config.mods.vm;
 in {
@@ -15,6 +15,12 @@ in {
             # "kvm.ignore_msrs=1"
             # "video=efifb:off"
             # "vfio-pci.ids=1002:73ef,1002:ab28"
+        ];
+        environment.systemPackages = with pkgs; [
+            qemu_kvm
+            libvirt
+            virt-manager
+            iproute2
         ];
     };
 }
