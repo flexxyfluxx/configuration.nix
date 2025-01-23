@@ -1,16 +1,19 @@
 { pkgs, lib, config, ... }:
-{
-    options.mods = {
-        cli.shellutils.enable = lib.mkEnableOption "enable various shell utils";
+let
+    cfg = config.mods.cli.shellutils;
+in {
+    options.mods.cli.shellutils = {
+        enable = lib.mkEnableOption "enable various shell utils";
+        calc = lib.mkEnableOption "enable Fend terminal calculator" // { default = true; };
     };
-    config = lib.mkIf config.mods.cli.shellutils.enable {
+    config = lib.mkIf cfg.enable {
         environment.systemPackages = with pkgs; [
             tree
             eza
             ncdu
 
             bat
-            htop
+            btop
             fzf
 
             wget
@@ -25,6 +28,6 @@
             gay
 
             vim
-        ];
+        ]   ++ (if cfg.calc.enable then [ fend ] else []);
     };
 }
