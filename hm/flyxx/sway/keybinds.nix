@@ -13,6 +13,9 @@ in {
         # General stuff
         "${mod}+Shift+q" = "kill";
 
+        # signout
+        "${mod}+Shift+Delete" = "exec swaynag -t warning -m 'confirm sesssion exit' -B 'yes' 'swaymsg exit'";
+
         # Applications
         "${mod}+Return" = "exec ${console}"; # Terminal
         "${mod}+d"      = "exec ${launcher}"; # bemenu

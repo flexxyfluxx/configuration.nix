@@ -50,6 +50,11 @@
         ]; */
     };
 
+  /* fileSystems."/mnt/winssd" =
+    { device = "/dev/disk/by-uuid/5652CCA752CC8CE5";
+      fsType = "ntfs";
+    }; */
+
   swapDevices =
     [ { device = "/dev/disk/by-uuid/b0808574-1c37-495a-a5b5-7984f9774745"; }
     ];
