@@ -24,5 +24,6 @@ in {
             };
         };
         programs.virt-manager.enable = true;
+        environment.systemPackages = [ pkgs.virtiofsd ];
     };
 }

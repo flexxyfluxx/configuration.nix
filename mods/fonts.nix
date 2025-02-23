@@ -8,7 +8,6 @@
     config = lib.mkIf config.mods.extraFonts.enable {
         fonts.packages = with pkgs; [
             noto-fonts
-            jetbrains-mono
             nerd-fonts.jetbrains-mono
         ];
     };
