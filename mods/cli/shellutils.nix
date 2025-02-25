@@ -10,7 +10,7 @@
             ncdu
 
             bat
-            htop
+            btop
             fzf
 
             wget
@@ -25,6 +25,8 @@
             gay
 
             vim
+
+            fend
         ];
     };
 }
