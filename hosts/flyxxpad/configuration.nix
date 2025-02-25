@@ -26,6 +26,8 @@
                 enable = true;
                 mods = {
                     desktopApps.defaults.enable = true;
+                    desktopApps.nheko   .enable = false;
+                    desktopApps.signal  .enable = true;
                     swaylock            .enable = true;
                     xdg-portal          .enable = true;
                     # mail                .enable = true;

@@ -16,8 +16,6 @@
                 syncthing
                 vesktop
                 vlc
-                # no more element. i have nheko now
-                # element-desktop
             ];
         };
     };

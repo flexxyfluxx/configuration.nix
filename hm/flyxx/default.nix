@@ -11,7 +11,9 @@
                 librewolf.enable = lib.mkEnableOption "enable librewolf" // { default = cfg.defaults.enable; };
                 thunderbird.enable = lib.mkEnableOption "enable thunderbird" // { default = cfg.defaults.enable; };
                 # INFO: nheko currently disabled due to being marked as insecure thanks to libolm deprecation etc
+                # ...whagever. gonna reenable
                 nheko.enable = lib.mkEnableOption "enable nheko"; #// { default = cfg.defaults.enable; };
+                signal.enable = lib.mkEnableOption "enable signal"; #// { default = cfg.defaults.enable; };
                 tidal.enable = lib.mkEnableOption "enable tidal";  # not a default-kinda module
             };
             sway = {

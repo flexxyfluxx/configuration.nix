@@ -30,6 +30,8 @@
                 mods = {
                     desktopApps.defaults.enable = true;
                     desktopApps.tidal   .enable = true;
+                    desktopApps.nheko   .enable = false;
+                    desktopApps.signal  .enable = true;
                     # mail                .enable = true;
                     notifs              .enable = true;
                     sway                .enable = true;
