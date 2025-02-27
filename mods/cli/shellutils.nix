@@ -5,28 +5,25 @@
     };
     config = lib.mkIf config.mods.cli.shellutils.enable {
         environment.systemPackages = with pkgs; [
-            tree
-            eza
-            ncdu
-
             bat
-            btop
-            fzf
-
-            wget
-            curl
-            p7zip
-
-            nix-output-monitor
-
-            neofetch
             blahaj
-            uwufetch
-            gay
-
-            vim
-
+            btop
+            curl
+            eza
             fend
+            fzf
+            gay
+            killall
+            make
+            ncdu
+            neofetch
+            nix-output-monitor
+            p7zip
+            screen
+            tree
+            uwufetch
+            vim
+            wget
         ];
     };
 }

@@ -24,6 +24,15 @@ in {
             };
         };
         programs.virt-manager.enable = true;
-        environment.systemPackages = [ pkgs.virtiofsd ];
+        environment.systemPackages = with pkgs; [
+            virtiofsd
+            libguestfs
+
+            # for macos vm reasons:
+            dmg2img
+            tesseract
+            cdrkit
+            nettools
+        ];
     };
 }
