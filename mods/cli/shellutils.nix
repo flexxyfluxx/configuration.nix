@@ -14,7 +14,7 @@
             fzf
             gay
             killall
-            make
+            gnumake
             ncdu
             neofetch
             nix-output-monitor
