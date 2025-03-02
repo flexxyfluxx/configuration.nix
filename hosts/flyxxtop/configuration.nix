@@ -15,7 +15,7 @@
             cli.shellutils  .enable = true;
             clipboard.wl    .enable = true;
             # INFO: Docker originally enabled globally for fucky Rust cross-compile reasons
-            docker          .enable = true;
+            dockerd         .enable = true;
             gaming          .enable = true;
             git             .enable = true;
             gnunet          .enable = true;
