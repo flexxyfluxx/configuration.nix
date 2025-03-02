@@ -1,11 +1,13 @@
 {
     imports = [
-        ./anglebracket.nix
-        ./bleedingedge.nix
         ./cli
-        ./clipboard.nix
         ./desktop
         ./fixes
+        ./users
+        ./anglebracket.nix
+        ./bleedingedge.nix
+        ./clipboard.nix
+        ./docker.nix
         ./fonts.nix
         ./gaming.nix
         ./git.nix
@@ -22,7 +24,6 @@
         ./printing.nix
         ./sound.nix
         ./ssh.nix
-        ./users
         ./video.nix
         ./vm.nix
         ./wireless

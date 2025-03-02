@@ -1,5 +1,8 @@
 { lib, ... }:
 {
+    # HACK: maybe theres a better place to do this.
+    #       but also it doesnt rlly make sense to make a global module,
+    #       since literally only my desktop is even capable of caring about this opt
     options = {
         enableHDD = lib.mkEnableOption "whether to even attempt to mount the HDD automatically";
     };
@@ -11,6 +14,8 @@
             bleedingedge    .enable = true;
             cli.shellutils  .enable = true;
             clipboard.wl    .enable = true;
+            # INFO: Docker originally enabled globally for fucky Rust cross-compile reasons
+            docker          .enable = true;
             gaming          .enable = true;
             git             .enable = true;
             gnunet          .enable = true;
@@ -32,6 +37,7 @@
                     desktopApps.tidal   .enable = true;
                     desktopApps.nheko   .enable = false;
                     desktopApps.signal  .enable = true;
+                    # INFO: mail module removed because my emails and passwords and shit were just in plaintext on github :|
                     # mail                .enable = true;
                     notifs              .enable = true;
                     sway                .enable = true;
