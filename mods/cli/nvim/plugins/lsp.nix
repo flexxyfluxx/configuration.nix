@@ -28,6 +28,7 @@
             '';
         };
         asm_lsp.enable = true;
+        lua_ls.enable = true;
         #zls.enable = true;
 
         #TODO: consider cssls
