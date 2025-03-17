@@ -1,4 +1,4 @@
-{ pkgs, launcher, wpctl, brightnessctl, console, ... }:
+{ pkgs, launcher, wpctl, brightnessctl, console }:
 let
     mod = "Mod4";
     left  = "h";
@@ -85,15 +85,19 @@ in {
         "XF86AudioLowerVolume" = "exec --no-startup-id ${wpctl} set-volume @DEFAULT_AUDIO_SINK@ 5%-";
         "XF86AudioMute"        = "exec --no-startup-id ${wpctl} set-mute @DEFAULT_AUDIO_SINK@ toggle";
 
-        # screenshot UwU
-        "${mod}+p" = "exec ${pkgs.grim}/bin/grim -g \"$(${pkgs.slurp}/bin/slurp)\" - | ${pkgs.wl-clipboard}/bin/wl-copy";
+        # screenshotting uwu
+        "${mod}+p" = "exec ${pkgs.sway-contrib.grimshot}/bin/grimshot copy area";
+        "${mod}+Shift+p" = "exec ${pkgs.sway-contrib.grimshot}/bin/grimshot copy active";
+        "${mod}+Control+p" = "exec ${pkgs.sway-contrib.grimshot}/bin/grimshot copy output";
+        "${mod}+Print" = "exec ${pkgs.sway-contrib.grimshot}/bin/grimshot savecopy anything";
+        "${mod}+Control+Shift+p" = "exec ${pkgs.flameshot.override { enableWlrSupport = true; }}/bin/flameshot gui";
 
         # resizing
         "${mod}+r" = "mode resize";
 
         # lock / idle
+        "${mod}+Control+BackSpace" = "exec systemctl suspend";
         "${mod}+Shift+BackSpace" = "exec swaylock -f"; 
         "${mod}+Control+Shift+BackSpace" = "exec swaylock -f && systemctl suspend"; 
-        "${mod}+Control+BackSpace" = "exec systemctl suspend";
     };
 }
