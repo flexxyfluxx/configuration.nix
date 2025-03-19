@@ -47,7 +47,7 @@
                         enable = true;
                         cpu-count = 16;
                     };
-                    xdg-portal.enable = true;
+                    # xdg-portal.enable = true;
                 };
             };
         };
