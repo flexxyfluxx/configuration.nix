@@ -25,6 +25,9 @@
 
         tagbar.enable = true;
 
+        # HACK: janky that i do this here
+        web-devicons.enable = true;  # for telescope
+
         # coq-nvim = {
         #     enable = true; # Autocompletion display
         #     autoStart = true;

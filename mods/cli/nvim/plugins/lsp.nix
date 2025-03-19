@@ -2,7 +2,7 @@
 {
     servers = {
         gopls.enable = true; # Golang LSP
-        rust-analyzer = {
+        rust_analyzer = {
             enable = true;
             installRustc = true;
             installCargo = false;
