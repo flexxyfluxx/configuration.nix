@@ -34,9 +34,10 @@
                 enable = true;
                 mods = {
                     desktopApps.defaults.enable = true;
-                    desktopApps.tidal   .enable = true;
+                    desktopApps.krita   .enable = true;
                     desktopApps.nheko   .enable = false;
                     desktopApps.signal  .enable = true;
+                    desktopApps.tidal   .enable = true;
                     # INFO: mail module removed because my emails and passwords and shit were just in plaintext on github :|
                     # mail                .enable = true;
                     notifs              .enable = true;
