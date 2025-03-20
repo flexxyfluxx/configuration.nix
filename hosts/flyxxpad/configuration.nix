@@ -7,6 +7,7 @@
         time.timeZone = "Europe/Berlin";
 
         mods = {
+            bleedingedge    .enable = true;
             cli.shellutils  .enable = true;
             clipboard.wl    .enable = true;
             gaming          .enable = true;
