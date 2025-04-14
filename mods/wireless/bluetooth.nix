@@ -5,5 +5,9 @@
     };
     config = lib.mkIf config.mods.wireless.bluetooth.enable {
         hardware.bluetooth.enable = true;
+        hardware.bluetooth.powerOnBoot = true;
+
+        # HACK: big big hack
+        networking.networkmanager.wifi.powersave = false;
     };
 }

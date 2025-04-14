@@ -16,6 +16,7 @@
                 syncthing
                 vesktop
                 vlc
+                bluetuith
             ];
             sessionVariables = {
                 "XDG_PICTURES_DIR" = "$HOME/Pictures";
