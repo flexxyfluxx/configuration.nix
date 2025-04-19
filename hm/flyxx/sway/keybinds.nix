@@ -67,6 +67,7 @@ in {
         "${mod}+space" = "focus mode_toggle";
         "${mod}+Shift+space" = "floating toggle";
         "${mod}+a" = "focus parent";
+        "${mod}+Shift+a" = "focus child";
 
         "${mod}+f" = "fullscreen";
 
