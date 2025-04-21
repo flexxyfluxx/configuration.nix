@@ -10,6 +10,7 @@
             bleedingedge    .enable = true;
             cli.shellutils  .enable = true;
             clipboard.wl    .enable = true;
+            dockerd         .enable = true;
             gaming          .enable = true;
             git             .enable = true;
             laptop-utils    .enable = true;
