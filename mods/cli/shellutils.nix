@@ -14,6 +14,7 @@
             fzf
             gay
             killall
+            kubectl  # HACK: systemwide, so i can actually use it properly
             gnumake
             ncdu
             neofetch

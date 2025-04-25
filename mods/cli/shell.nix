@@ -46,6 +46,7 @@
                 enable = true;
                 custom = toString ./omz;
                 plugins = [ 
+                    "kubectl"
                     "vi-mode"
                     "fzf"
                     "flyxx"
