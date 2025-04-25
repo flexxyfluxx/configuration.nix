@@ -10,6 +10,7 @@
                 alsa-utils
                 bc
                 jetbrains.idea-ultimate
+                jetbrains.idea-community
                 jetbrains.pycharm-professional
                 logisim-evolution
                 prismlauncher
