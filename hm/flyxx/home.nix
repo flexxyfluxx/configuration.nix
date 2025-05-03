@@ -14,7 +14,6 @@
                 jetbrains.pycharm-professional
                 logisim-evolution
                 prismlauncher
-                syncthing
                 vesktop
                 vlc
                 bluetuith

@@ -42,6 +42,7 @@
                     # mail                .enable = true;
                     notifs              .enable = true;
                     sway                .enable = true;
+                    syncthing           .enable = true;
                     swaylock            .enable = true;
                     waybar = {
                         enable = true;

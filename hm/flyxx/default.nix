@@ -15,6 +15,7 @@
                 # ...whagever. gonna reenable
                 nheko.enable = lib.mkEnableOption "enable nheko"; #// { default = cfg.defaults.enable; };
                 signal.enable = lib.mkEnableOption "enable signal"; #// { default = cfg.defaults.enable; };
+                syncthing.enable = lib.mkEnableOption "enable signal";
                 tidal.enable = lib.mkEnableOption "enable tidal";  # not a default-kinda module
             };
             sway = {
@@ -47,6 +48,7 @@
                 ./notifs.nix
                 ./sway
                 ./swaylock.nix
+                ./syncthing.nix
                 ./waybar
             ];
         };
