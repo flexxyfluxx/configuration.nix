@@ -35,9 +35,22 @@ in {
             nettools
         ];
 
-        boot.extraModprobeConfig = ''
-            options kvm_amd nested=1
-            options kvm ignore_msrs=1 report_ignored_msrs=0
-        '';
+        boot = {
+            extraModprobeConfig = ''
+                options kvm_amd nested=1
+                options kvm ignore_msrs=1Control report_ignored_msrs=0
+            '';
+            kernelModules = [
+                # "kvmfr"
+                "vfio"
+                "vfio_iommu_type1"
+                "vfio_pci"
+                "vfio_virqfd"
+                "amdgpu"
+            ];
+            kernelParams = [
+                "psi=1"
+            ];
+        };
     };
 }
