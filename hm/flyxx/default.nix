@@ -15,7 +15,6 @@
                 # ...whagever. gonna reenable
                 nheko.enable = lib.mkEnableOption "enable nheko"; #// { default = cfg.defaults.enable; };
                 signal.enable = lib.mkEnableOption "enable signal"; #// { default = cfg.defaults.enable; };
-                syncthing.enable = lib.mkEnableOption "enable signal";
                 tidal.enable = lib.mkEnableOption "enable tidal";  # not a default-kinda module
             };
             sway = {
@@ -34,6 +33,7 @@
                 };
             };
             swaylock.enable = lib.mkEnableOption "enable swaylock" // { default = sway.enable; };
+            syncthing.enable = lib.mkEnableOption "enable syncthing";
             xdg-portal.enable = lib.mkEnableOption "enable xdg-portal (for screen sharing)"; #// { default = true;
             # mail.enable = lib.mkEnableOption "enable mail";
             notifs.enable = lib.mkEnableOption "enable notification widget" // { default = sway.enable; };
