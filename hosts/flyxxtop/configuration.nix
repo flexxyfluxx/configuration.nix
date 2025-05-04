@@ -22,7 +22,12 @@
             ntfs3g          .enable = true;
             printing        .enable = true;
             users.flyxx     .enable = true;
-            vm              .enable = true;
+            vm = {
+                enable              = true;  # this formatting is something
+                vfio-pci-ids = [
+                    "1002:164e"
+                ];
+            };
             wireless = {
                 bluetooth   .enable = true;
             };

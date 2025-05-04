@@ -4,6 +4,11 @@ let
 in {
     options.mods.vm = {
         enable = lib.mkEnableOption "enable kernel opts to allow gpu passthrough to vm";
+        vfio-pci-ids = lib.mkOption  {
+            description = "VFIO pci ids of devices to be passed through to vm";
+            default = [];
+            type = lib.types.listOf lib.types.str;
+        };
     };
     config = lib.mkIf cfg.enable {
         virtualisation.libvirtd = {
@@ -50,6 +55,7 @@ in {
             ];
             kernelParams = [
                 "psi=1"
+                ("vfio-pci.ids=" + lib.concatStringsSep "," cfg.vfio-pci-ids)
             ];
         };
     };
