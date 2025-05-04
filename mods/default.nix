@@ -14,6 +14,7 @@
         ./gnunet.nix
         ./greetd.nix
         ./grub.nix
+        ./hamachi.nix
         ./keymap.nix
         ./laptop-utils.nix
         ./man.nix

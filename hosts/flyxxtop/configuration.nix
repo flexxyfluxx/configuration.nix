@@ -19,6 +19,7 @@
             gaming          .enable = true;
             git             .enable = true;
             gnunet          .enable = true;
+            hamachi         .enable = true;
             ntfs3g          .enable = true;
             printing        .enable = true;
             users.flyxx     .enable = true;
