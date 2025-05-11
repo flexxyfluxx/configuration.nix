@@ -1,10 +1,11 @@
 { lib, config, ... }:
 {
     imports = [
-        ./librewolf.nix
-        ./nheko.nix
         ./kitty.nix
         ./krita.nix
+        ./librewolf.nix
+        ./nheko.nix
+        ./piper.nix
         ./signal.nix
         ./thunderbird.nix
         ./tidal.nix

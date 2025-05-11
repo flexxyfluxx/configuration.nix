@@ -21,6 +21,7 @@
             gnunet          .enable = true;
             ntfs3g          .enable = true;
             printing        .enable = true;
+            ratbagd         .enable = true;
             users.flyxx     .enable = true;
             vm = {
                 enable              = true;  # this formatting is something
@@ -38,11 +39,14 @@
             flyxx = {
                 enable = true;
                 mods = {
-                    desktopApps.defaults.enable = true;
-                    desktopApps.krita   .enable = true;
-                    desktopApps.nheko   .enable = false;
-                    desktopApps.signal  .enable = true;
-                    desktopApps.tidal   .enable = true;
+                    desktopApps = {
+                        defaults        .enable = true;
+                        krita           .enable = true;
+                        nheko           .enable = false;
+                        piper           .enable = true;
+                        signal          .enable = true;
+                        tidal           .enable = true;
+                    };
                     # INFO: mail module removed because my emails and passwords and shit were just in plaintext on github :|
                     # mail                .enable = true;
                     notifs              .enable = true;

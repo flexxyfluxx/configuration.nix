@@ -14,7 +14,7 @@
         ./gnunet.nix
         ./greetd.nix
         ./grub.nix
-        ./keymap.nix
+        ./input.nix
         ./laptop-utils.nix
         ./man.nix
         ./ncmpcpp.nix

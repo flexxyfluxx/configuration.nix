@@ -10,6 +10,7 @@
                 kitty.enable = lib.mkEnableOption "enable kitty" // { default = cfg.defaults.enable; };
                 krita.enable = lib.mkEnableOption "enable tidal";  # not a default-kinda module
                 librewolf.enable = lib.mkEnableOption "enable librewolf" // { default = cfg.defaults.enable; };
+                piper.enable = lib.mkEnableOption "enable piper";
                 thunderbird.enable = lib.mkEnableOption "enable thunderbird" // { default = cfg.defaults.enable; };
                 # INFO: nheko currently disabled due to being marked as insecure thanks to libolm deprecation etc
                 # ...whagever. gonna reenable
