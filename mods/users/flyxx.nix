@@ -15,6 +15,7 @@ in {
                 ++ (if config.mods.gnunet.enable then [ "gnunet" ] else [])
                 ++ (if config.mods.vm.enable then [ "libvirtd" "input" "kvm" "qemu-libvirtd" ] else [])
                 ++ (if config.mods.dockerd.enable then [ "docker" ] else [])
+                ++ (if config.mods.input.ratbagd.enable then [ "ratbagd" "libratbag" ] else [])
             ;
         };
         security.pam.services."flyxx".enableGnomeKeyring = true;

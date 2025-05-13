@@ -21,7 +21,9 @@
             gnunet          .enable = true;
             ntfs3g          .enable = true;
             printing        .enable = true;
-            ratbagd         .enable = true;
+            input = {
+                ratbagd     .enable = true;
+            };
             users.flyxx     .enable = true;
             vm = {
                 enable              = true;  # this formatting is something
