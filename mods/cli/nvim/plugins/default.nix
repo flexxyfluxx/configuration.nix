@@ -44,6 +44,6 @@
         } // import ./telescope.nix;
         harpoon = {
             enable = true;
-        } // import ./harpoon.nix;
+        };# // import ./harpoon.nix;
     };
 }
