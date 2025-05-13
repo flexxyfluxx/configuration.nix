@@ -30,6 +30,7 @@
         asm_lsp.enable = true;
         lua_ls.enable = true;
         #zls.enable = true;
+        jdtls.enable = true;
 
         #TODO: consider cssls
     };
