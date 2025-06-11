@@ -18,7 +18,8 @@
             dockerd         .enable = true;
             gaming          .enable = true;
             git             .enable = true;
-            gnunet          .enable = true;
+            # gnunet          .enable = true;
+            networkmanager  .enable = true;  # whytf not
             ntfs3g          .enable = true;
             printing        .enable = true;
             input = {
