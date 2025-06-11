@@ -9,7 +9,7 @@
             remotePlay.openFirewall = true;
             dedicatedServer.openFirewall = true;
             extraCompatPackages = with pkgs; [
-                proton-ge-bin 
+                proton-ge-bin
             ];
             extraPackages = with pkgs; [
                 SDL2
