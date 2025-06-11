@@ -2,6 +2,7 @@
 {
     imports = [
         ./flyxx
+        ./neon
     ];
     options = {
         hm.enable = lib.mkEnableOption "enable home-manager";

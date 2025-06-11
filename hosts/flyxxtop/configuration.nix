@@ -25,6 +25,7 @@
                 ratbagd     .enable = true;
             };
             users.flyxx     .enable = true;
+            users.neon      .enable = true;
             vm = {
                 enable              = true;  # this formatting is something
                 vfio-pci-ids = [
@@ -62,16 +63,34 @@
                     # xdg-portal.enable = true;
                 };
             };
+
+            neon = {
+                enable = true;
+                mods = {
+                    desktopApps = {
+                        defaults        .enable = true;
+                        signal          .enable = true;
+                    };
+                    notifs              .enable = true;
+                    sway                .enable = true;
+                    swaylock            .enable = true;
+                    waybar = {
+                        enable = true;
+                        cpu-count = 16;
+                    };
+                    # xdg-portal.enable = true;
+                };
+            };
         };
 
         enableHDD = false;
 
-        networking.wireless = {
-            enable = true;
-            networks = {
-
-            };
-        };
+        # networking.wireless = {
+        #     enable = true;
+        #     networks = {
+        #
+        #     };
+        # };
 
         # something something, do not change this ever, unless you know what you're doing
         # ig my desktop inherits this as well.
