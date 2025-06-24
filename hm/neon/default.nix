@@ -35,16 +35,22 @@
         };
     };
     config = lib.mkIf config.hm.neon.enable {
-        home-manager.users."neon" = {
-            imports = [
-                ./desktopApps
-                ./home.nix
-                # ./mail.nix
-                ./notifs.nix
-                ./sway
-                ./swaylock.nix
-                ./waybar
-            ];
-        };
+        home-manager.users."neon" = import ./johannes;
+        # homeConfigurations."neon" = home-manager.lib.homeManagerConfiguration {
+        #     modules = [
+        #         stylix.homeModules.stylix
+        #     ];
+        # };
+        # home-manager.users."neon" = {
+        #     imports = [
+        #         ./desktopApps
+        #         ./home.nix
+        #         # ./mail.nix
+        #         ./notifs.nix
+        #         ./sway
+        #         ./swaylock.nix
+        #         ./waybar
+        #     ];
+        # };
     };
 }

@@ -17,6 +17,13 @@
             url = "github:remi-dupre/pinix";
             inputs.nixpkgs.follows = "nixpkgs";
         };
+        nur = {
+            url = "github:nix-community/NUR";
+        };
+        stylix = {
+            url = "github:danth/stylix";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
     };
 
     outputs = { nixpkgs, home-manager, nixvim, sops-nix, pinix, ... }@inputs:
@@ -27,6 +34,9 @@
                 pkgs = import nixpkgs {
                     system = "${arch}";
                     config.allowUnfree = true;
+                    overlays = [
+                        inputs.nur.overlays.default
+                    ];
                 };
                 modules = [
                     ./hosts/${hostname}/configuration.nix
