@@ -51,8 +51,7 @@
                         signal          .enable = true;
                         tidal           .enable = true;
                     };
-                    # INFO: mail module removed because my emails and passwords and shit were just in plaintext on github :|
-                    # mail                .enable = true;
+                    latex               .enable = true;
                     notifs              .enable = true;
                     sway                .enable = true;
                     syncthing           .enable = true;

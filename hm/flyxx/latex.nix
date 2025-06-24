@@ -1,6 +1,6 @@
 { pkgs, lib, config, osConfig, ... }:
 {
-    config = lib.mkIf osConfig.hm.flyxx.mods.tex.enable {
+    config = lib.mkIf osConfig.hm.flyxx.mods.latex.enable {
         programs.texlive = {
             enable = true;
         };
