@@ -32,22 +32,12 @@
 
         { mode = "n"; key = "<Esc>"; action.__raw = "vim.cmd.noh"; }
 
-        /*
-        -- vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux new tmux-sessionizer<CR>")
-        vim.keymap.set("n", "<leader>f", function()helpers=helpers;
-            vim.lsp.buf.format({formatting_options = {
-                tabSize = 4
-            }})
-        end)
-        */
-
         { mode = "n"; key = "<leader>w"; action.__raw = "vim.cmd.up"; }
 
         { mode = "n"; key = "<C-k>"; action = "<cmd>cnext<CR>zz"; }
         { mode = "n"; key = "<C-j>"; action = "<cmd>cprev<CR>zz"; }
 
         { mode = "n"; key = "<leader>s"; action = ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>"; }
-        { mode = "n"; key = "<leader>x"; action = "<cmd>!chmod +x %<CR>"; options.silent = true; }
 
         { mode = "i"; key = "<C-BS>"; action = "<Esc>vlb\"_c"; }
 
