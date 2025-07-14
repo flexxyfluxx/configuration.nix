@@ -78,8 +78,8 @@ in {
         "${mod}+Control+c" = "exec ${config-edit}";
 
         # display brightness things
-        "XF86MonBrightnessUp" = "exec --no-startup-id ${brightnessctl} s 15+";
-        "XF86MonBrightnessDown" = "exec --no-startup-id ${brightnessctl} s 15-";
+        "XF86MonBrightnessUp" = "exec --no-startup-id ${brightnessctl} s 5%+";
+        "XF86MonBrightnessDown" = "exec --no-startup-id ${brightnessctl} s 5%-";
 
         # audio volume control
         "XF86AudioRaiseVolume" = "exec --no-startup-id ${wpctl} set-volume @DEFAULT_AUDIO_SINK@ 5%+";

@@ -4,8 +4,7 @@
     position = "bottom";
     modules-left = [ "sway/workspaces" "sway/mode" ];
     modules-right = [ "network" "load" "temperature" "cpu" "memory" "disk" "battery" "wireplumber" "clock" ];
-    # FIXME: re-enable tray icons once segfault gets fixed
-    # modules-center = [ "tray" ];
+    modules-center = [ "tray" ];
     wireplumber = {
         scroll-step = 5; # in %
     };
