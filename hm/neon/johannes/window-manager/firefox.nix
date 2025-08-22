@@ -23,7 +23,8 @@ in {
       extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
         ublock-origin
         bitwarden
-        enhancer-for-youtube
+        # broken:
+        # enhancer-for-youtube
         facebook-container
         fastforwardteam
         reddit-enhancement-suite
