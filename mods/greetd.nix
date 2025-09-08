@@ -10,7 +10,7 @@
             enable = true;
             settings = {
                 default_session = {
-                    command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --remember --asterisks --width 60 --cmd sway --greeting 'Login'";
+                    command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --asterisks --width 60 --cmd sway --greeting 'Login'";
                 };
             };
         };
