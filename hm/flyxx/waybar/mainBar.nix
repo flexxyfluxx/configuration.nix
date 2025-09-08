@@ -19,7 +19,9 @@
     };
     clock = {
         interval = 1;
-        format = "{:%Y-%m-%d %T}";
+        format = "{:%a %d %T}";
+        tooltip = true;
+        tooltip-format = "{:%a %Y-%m-%d %T %Z %z}";
     };
     cpu = {
         interval = 1;
