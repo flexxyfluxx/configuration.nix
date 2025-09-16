@@ -20,6 +20,7 @@
             git             .enable = true;
             # gnunet          .enable = true;
             networkmanager  .enable = true;  # whytf not
+            nix-ld          .enable = true;
             ntfs3g          .enable = true;
             printing        .enable = true;
             input = {

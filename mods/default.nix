@@ -20,6 +20,7 @@
         ./ncmpcpp.nix
         ./networkmanager.nix
         ./nix.nix
+        ./nix-ld.nix
         ./ntfs.nix
         ./printing.nix
         ./sound.nix

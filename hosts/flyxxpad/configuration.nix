@@ -13,6 +13,7 @@
             git             .enable = true;
             laptop-utils    .enable = true;
             networkmanager  .enable = true;
+            nix-ld          .enable = true;
             printing        .enable = true;
             users.flyxx     .enable = true;
             wireless = {
