@@ -4,8 +4,6 @@
         # inputs.sops-nix.nixosModules.sops
     ];
     config = {
-        time.timeZone = "Europe/Berlin";
-
         mods = {
             bleedingedge    .enable = true;
             cli.shellutils  .enable = true;
