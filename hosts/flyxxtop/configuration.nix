@@ -47,6 +47,7 @@
                     desktopApps = {
                         defaults        .enable = true;
                         krita           .enable = true;
+                        libreoffice     .enable = true;
                         nheko           .enable = false;
                         piper           .enable = true;
                         signal          .enable = true;

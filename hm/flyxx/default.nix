@@ -8,12 +8,13 @@
             desktopApps = let cfg = config.hm.flyxx.mods.desktopApps; in {
                 defaults.enable = lib.mkEnableOption "enable default desktop apps";
                 kitty.enable = lib.mkEnableOption "enable kitty" // { default = cfg.defaults.enable; };
-                krita.enable = lib.mkEnableOption "enable tidal";  # not a default-kinda module
+                krita.enable = lib.mkEnableOption "enable krita";  # not a default-kinda module
+                libreoffice.enable = lib.mkEnableOption "enable libreoffice";
                 librewolf.enable = lib.mkEnableOption "enable librewolf" // { default = cfg.defaults.enable; };
-                piper.enable = lib.mkEnableOption "enable piper";
-                thunderbird.enable = lib.mkEnableOption "enable thunderbird" // { default = cfg.defaults.enable; };
                 nheko.enable = lib.mkEnableOption "enable nheko"; #// { default = cfg.defaults.enable; };
+                piper.enable = lib.mkEnableOption "enable piper";
                 signal.enable = lib.mkEnableOption "enable signal"; #// { default = cfg.defaults.enable; };
+                thunderbird.enable = lib.mkEnableOption "enable thunderbird" // { default = cfg.defaults.enable; };
                 tidal.enable = lib.mkEnableOption "enable tidal";  # not a default-kinda module
             };
             sway = {
@@ -31,7 +32,7 @@
                     description = "CPU core count to display";
                 };
             };
-            latex.enable = lib.mkEnableOption "enable latex tools";
+            latex.enable = lib.mkEnableOption "enable latex tools"; # replace with typst?
             swaylock.enable = lib.mkEnableOption "enable swaylock" // { default = sway.enable; };
             syncthing.enable = lib.mkEnableOption "enable syncthing";
             xdg-portal.enable = lib.mkEnableOption "enable xdg-portal (for screen sharing)"; #// { default = true;

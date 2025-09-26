@@ -3,6 +3,7 @@
     imports = [
         ./kitty.nix
         ./krita.nix
+        ./libreoffice.nix
         ./librewolf.nix
         ./nheko.nix
         ./piper.nix
