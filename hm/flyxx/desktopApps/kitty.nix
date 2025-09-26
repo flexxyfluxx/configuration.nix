@@ -27,6 +27,7 @@
                 #background = "#000000";
             };
         };
+        programs.zsh.enable = true; # because the way HM does kitty shell integration fucking sucks
     };
 }
 
