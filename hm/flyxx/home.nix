@@ -9,6 +9,8 @@
             packages = with pkgs; [
                 alsa-utils
                 bc
+                bluetuith
+                evince
                 jetbrains.idea-ultimate
                 jetbrains.idea-community
                 jetbrains.pycharm-professional
@@ -16,7 +18,6 @@
                 prismlauncher
                 vesktop
                 vlc
-                bluetuith
             ];
             sessionVariables = {
                 "XDG_PICTURES_DIR" = "$HOME/Pictures";
