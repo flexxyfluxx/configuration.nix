@@ -97,8 +97,10 @@ in {
         "${mod}+r" = "mode resize";
 
         # lock / idle
-        "${mod}+Control+BackSpace" = "exec systemctl suspend";
-        "${mod}+Shift+BackSpace" = "exec swaylock -f"; 
+        "${mod}+Shift+BackSpace" = "exec systemctl suspend";
+        "${mod}+Shift+Alt+BackSpace" = "exec systemctl hibernate";
+        "${mod}+Control+BackSpace" = "exec swaylock -f"; 
         "${mod}+Control+Shift+BackSpace" = "exec swaylock -f && systemctl suspend"; 
+        "${mod}+Control+Shift+Alt+BackSpace" = "exec swaylock -f && systemctl hibernate"; 
     };
 }
