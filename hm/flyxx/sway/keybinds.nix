@@ -1,4 +1,4 @@
-{ pkgs, launcher, wpctl, brightnessctl, console }:
+{ pkgs, launcher, wpctl, brightnessctl, console, suspendThenHibernate }:
 let
     mod = "Mod4";
     left  = "h";
@@ -6,6 +6,11 @@ let
     up    = "k";
     right = "l";
     config-edit = "${console} -d /etc/nixos sudo nvim .";
+    cmd-suspend = if suspendThenHibernate
+                  then "systemctl suspend-then-hibernate"
+                  else "systemctl suspend";
+    cmd-lock = "swaylock -f";
+    cmd-lock-suspend = "${cmd-lock} && ${cmd-suspend}";
 in {
     #modifier = mod;
     floating.modifier = mod;
@@ -97,10 +102,8 @@ in {
         "${mod}+r" = "mode resize";
 
         # lock / idle
-        "${mod}+Shift+BackSpace" = "exec systemctl suspend";
-        "${mod}+Shift+Alt+BackSpace" = "exec systemctl hibernate";
-        "${mod}+Control+BackSpace" = "exec swaylock -f"; 
-        "${mod}+Control+Shift+BackSpace" = "exec swaylock -f && systemctl suspend"; 
-        "${mod}+Control+Shift+Alt+BackSpace" = "exec swaylock -f && systemctl hibernate"; 
+        "${mod}+Shift+BackSpace" = "exec ${cmd-suspend}";
+        "${mod}+Control+BackSpace" = "exec ${cmd-lock}";
+        "${mod}+Control+Shift+BackSpace" = "exec ${cmd-lock-suspend}";
     };
 }

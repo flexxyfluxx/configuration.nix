@@ -33,7 +33,10 @@
                     xdg-portal          .enable = true;
                     # mail                .enable = true;
                     notifs              .enable = true;
-                    sway                .enable = true;
+                    sway = {
+                        enable = true;
+                        config.suspendThenHibernate.enable = true;
+                    };
                     waybar = {
                         enable = true;
                         cpu-count = 8;

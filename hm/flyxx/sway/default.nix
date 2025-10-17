@@ -56,6 +56,7 @@
                         launcher = "${osConfig.hm.flyxx.mods.sway.config.launcher}";
                         # launcher = "${pkgs.bemenu}/bin/bemenu-run --fn 'JetBrainsMono Nerd Font Regular 11'";
                         console = "kitty";
+                        suspendThenHibernate = osConfig.hm.flyxx.mods.sway.config.suspendThenHibernate.enable;
                         inherit pkgs;
                     }
             ;
