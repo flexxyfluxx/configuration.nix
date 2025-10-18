@@ -24,7 +24,7 @@
                         description = "app launcher config";
                         default = "${pkgs.bemenu}/bin/bemenu-run --fn 'JetBrainsMono Nerd Font Regular 11'";
                     };
-                    suspendThenHibernate.enable = lib.mkEnableOption "enable suspend-then-hibernate sleeping behavior" // { default = true; };
+                    suspendThenHibernate.enable = lib.mkEnableOption "enable suspend-then-hibernate sleeping behavior";
                 };
             };
             waybar = {
