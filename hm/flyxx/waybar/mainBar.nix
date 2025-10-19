@@ -53,6 +53,10 @@
         tooltip-format = "main: {used:0.1f}/{total:0.1f}; swap: {swapUsed:0.1f}/{swapTotal:0.1f}";
     };
     network = {
-        interval = 1;
+        interval = 10;
+        format-ethernet = "e: {ipaddr}/{cidr}";
+        tooltip-format = "{ifname} via {gwaddr}; ↑{bandwidthUpBits} ↓{bandwidthDownBits}";
+        format-wifi = "w &lt;{essid}&gt;: {ipaddr}/{cidr}; {signalStrength}%";
+        tooltip-format-wifi = "{ifname} via {gwaddr} on {frequency}; ↑{bandwidthUpBits} ↓{bandwidthDownBits}; {signaldBm}";
     };
 }

@@ -97,7 +97,8 @@ button:hover {
 #mpd {
     padding: 0 5px;
     color: #ffffff;
-    border-right: 2px solid #54626D;
+    border-right: 1px solid #54626D;
+    border-left: 1px solid #54626D;
 }
 
 #window,
@@ -214,11 +215,16 @@ label:focus {
 }
 
 #network {
-    background-color: #2980b9;
+    /* background-color: #2980b9; */
+    /* border-bottom: 2px solid rgba(41, 128, 185, 1.0); */
+    /* border-bottom: 2px solid rgba(0, 128, 255, 0.5); */
+
+    border-bottom: 2px solid rgba(56, 175, 255, 0.5);
 }
 
 #network.disconnected {
-    background-color: #f53c3c;
+    /* background-color: #f53c3c; */
+    border-bottom: 2px solid rgba(255, 61, 61, 0.5);
 }
 
 #pulseaudio {
