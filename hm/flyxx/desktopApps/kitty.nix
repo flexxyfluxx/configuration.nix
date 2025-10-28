@@ -15,6 +15,8 @@
                 "ctrl+shift+n" = "new_window";
                 "ctrl+shift+q" = "close_window";
                 "ctrl+shift+w" = "nop";
+                "ctrl+shift+alt+l" = "disable_ligatures_in all always";
+                "ctrl+shift+l" = "disable_ligatures_in all cursor";
             };
             settings = {
                 disable_ligatures = "cursor";
