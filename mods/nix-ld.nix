@@ -13,6 +13,11 @@ in {
                 SDL2
                 xorg.libX11
                 alsa-lib
+                webkitgtk_4_1
+                gtk3
+                gdk-pixbuf
+                libsoup_3
+                glib
             ];
         };
     };
