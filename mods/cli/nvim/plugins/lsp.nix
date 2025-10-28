@@ -31,6 +31,7 @@
         lua_ls.enable = true;
         #zls.enable = true;
         jdtls.enable = true;
+        vhdl_ls.enable = true;
 
         #TODO: consider cssls
     };
