@@ -9,6 +9,7 @@ in {
         programs.nix-ld = {
             enable = true;
             libraries = with pkgs; [
+                libgcc.lib
                 libGL
                 SDL2
                 xorg.libX11
@@ -18,6 +19,7 @@ in {
                 gdk-pixbuf
                 libsoup_3
                 glib
+                libxrender
             ];
         };
     };
