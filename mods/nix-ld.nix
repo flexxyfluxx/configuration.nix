@@ -9,17 +9,21 @@ in {
         programs.nix-ld = {
             enable = true;
             libraries = with pkgs; [
-                libgcc.lib
-                libGL
                 SDL2
-                xorg.libX11
                 alsa-lib
-                webkitgtk_4_1
-                gtk3
+                cairo
                 gdk-pixbuf
-                libsoup_3
                 glib
+                gtk3
+                libGL
+                libgcc.lib
+                libsoup_3
                 libxrender
+                pango
+                tcl
+                tclPackages.tk
+                webkitgtk_4_1
+                xorg.libX11
             ];
         };
     };
