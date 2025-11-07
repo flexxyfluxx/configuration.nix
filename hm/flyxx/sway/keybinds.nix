@@ -105,5 +105,9 @@ in {
         "${mod}+Shift+BackSpace" = "exec ${cmd-suspend}";
         "${mod}+Control+BackSpace" = "exec ${cmd-lock}";
         "${mod}+Control+Shift+BackSpace" = "exec ${cmd-lock-suspend}";
+
+        # HACK: requires that mako be installed
+        "${mod}+g" = "exec makoctl dismiss";
+        "${mod}+Shift+g" = "exec makoctl restore";
     };
 }
