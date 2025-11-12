@@ -12,18 +12,22 @@ in {
                 SDL2
                 alsa-lib
                 cairo
+                expat
+                fontconfig
                 gdk-pixbuf
                 glib
                 gtk3
                 libGL
                 libgcc.lib
                 libsoup_3
+                libxext
                 libxrender
                 pango
                 tcl
                 tclPackages.tk
                 webkitgtk_4_1
                 xorg.libX11
+                xorg.libXft
             ];
         };
     };
