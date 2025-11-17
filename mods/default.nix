@@ -21,6 +21,7 @@
         ./networkmanager.nix
         ./nix.nix
         ./nix-ld.nix
+        ./notifs.nix
         ./ntfs.nix
         ./printing.nix
         ./sound.nix

@@ -11,8 +11,8 @@
             curl
             eza
             fend
-            fzf
             gay
+            jq
             killall
             kubectl  # HACK: systemwide, so i can actually use it properly
             gnumake

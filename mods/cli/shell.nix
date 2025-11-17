@@ -15,52 +15,43 @@
             omz.enable = lib.mkDefault true;
             aliases.enable = lib.mkDefault true;
         };
-        programs.zsh = {
+
+        programs.fish = {
             enable = true;
             shellAliases = lib.mkIf config.mods.cli.shell.aliases.enable {
                 ssh =  "kitty +kitten ssh -i ~/.ssh/id_ed25519";
-                ls = "ls --color=auto -F ";
-                le = "${pkgs.eza}/bin/eza --icons ";
-                la = "le -a ";
-                ll = "la -l --header --git ";
+                ls = "ls --color=auto -F";
+                le = "${pkgs.eza}/bin/eza --icons";
+                la = "le -a";
+                ll = "la -l --header --git";
                 lt = "la -T";
                 llt = "ll -T";
-                lsd = "le /dev ";
+                lsd = "le /dev";
                 goodnight = "shutdown 0";
                 grep = "grep --color=auto";
-                #smolfetch = "neofetch";#//TODO make this not fake
-                nv = "nvim ";
+                nv = "nvim";
                 "cd." = "cd ..";
                 woman = "man";
                 icat = "kitten icat";
             };
-            # Disables the startup wizard
-            shellInit = ''
-                zsh-newuser-install() { :; }
-                '';
-            histSize = 25000000;
-            autosuggestions.enable = true;
-            enableCompletion = true;
-            syntaxHighlighting.enable = true;
-            ohMyZsh = lib.mkIf config.mods.cli.shell.omz.enable {
-                enable = true;
-                custom = toString ./omz;
-                plugins = [ 
-                    "kubectl"
-                    "vi-mode"
-                    "fzf"
-                    "flyxx"
-                ];
-                theme = "flyxx";
-            };
+            useBabelfish = true;
+            interactiveShellInit = ''
+                set fish_greeting
+            '';
+
+            promptInit = builtins.readFile ./fish_prompt_init.fish;
         };
-        users.defaultUserShell = pkgs.zsh;
+        users.defaultUserShell = pkgs.fish;
 
         programs.direnv = lib.mkIf config.mods.cli.shell.direnv.enable {
             enable = true;
         };
         environment.systemPackages = with pkgs; [
+            # TODO: figure out patching; make patch to disable active window checking
+            # fishPlugins.done
+            fishPlugins.fzf
             fzf
+            # fishPlugins.forgit
         ];
     };
 }
