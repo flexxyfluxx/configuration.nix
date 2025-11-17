@@ -1,7 +1,7 @@
 set fish_color_status       red
 set fish_color_cwd          cyan
 set fish_color_user         green
-set fish_color_user_root    green
+set fish_color_user_root    red
 set fish_color_at_sign      brblue
 set fish_color_host         blue
 set fish_color_host_remote  yellow
