@@ -22,7 +22,7 @@ function prompt_user --description 'display user name for the prompt'
         set color_host $fish_color_host_remote
     end
 
-    echo -n -s (set_color $fish_color_user) "$USER" (set_color $fish_color_at_sign) @ (set_color $color_host) (prompt_hostname) (set_color normal)
+    echo -n -s (set_color $color_user) "$USER" (set_color $fish_color_at_sign) @ (set_color $color_host) (prompt_hostname) (set_color normal)
 end
 
 function git_branch_name
@@ -38,7 +38,7 @@ function fish_prompt --description 'Write out the prompt'
     set -lx __fish_last_status $status # Export for __fish_print_pipestatus.
 
     set -l normal (set_color normal)
-    set -l color_cwd $fish_color_cwd
+    set -lx color_user $fish_color_user
     
     set -l suffix '>'
 
@@ -64,5 +64,5 @@ function fish_prompt --description 'Write out the prompt'
     if test "$prompt_status" != ""
         echo
     end
-    echo -ns (prompt_user)' ' (set_color $color_cwd) (prompt_pwd) $normal (git_branch_name) $normal \n " ~" $suffix " "
+    echo -ns (prompt_user)' ' (set_color $fish_color_cwd) (prompt_pwd) $normal (git_branch_name) $normal \n " ~" $suffix " "
 end
